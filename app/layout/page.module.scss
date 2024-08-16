@@ -300,9 +300,10 @@
   padding: 0 29px;
 
   h1 {
-    font-size: 33px;
-    font-weight: 700;
-    margin-bottom: 23px;
+    font-size: 37px;
+    font-weight: 900;
+    letter-spacing: 0.023em;
+    margin-bottom: 20px;
     color: $dark_text_bright;
   }
 
@@ -327,8 +328,9 @@
     padding-left: 29px;
 
     &_title {
-      font-size: 24px;
-      font-weight: 600;
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 0.023em;
       color: $dark_text_bright;
     }
     &_little {
@@ -354,6 +356,7 @@
 
     &:hover {
       background-color: $dark_project_bg_onHover;
+
     }
   }
 
@@ -376,7 +379,8 @@
     object-fit: cover;
   }
   &_title {
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 10px;
     font-weight: 600;
     color: $dark_h1_base;
   }
