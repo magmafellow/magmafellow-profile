@@ -77,6 +77,77 @@ export default function Page() {
           <div className={`${styles.profile_projects}`}>
             <h2 className={`${styles.profile_projects_title}`}>Projects</h2>
             <p className={`${styles.profile_projects_little} ${styles.p_limited}`}>Explore my ideas. I have worked on 18+ ones.</p>
+            <div className={`${styles.projects}`}>
+              <div className={`${styles.projects_item}`}>
+                <div className={`${styles.projects_imgBox}`}>
+                  <Image width={289} height={200} alt='"design-think" project' src='/design-think.png' />
+                </div>
+                <div className={`${styles.projects_infoBox}`}>
+                  <h3 className={`${styles.projects_title}`}>Design think</h3>
+                  <p className={`${styles.projects_description}`}>Direct Chat is a powerful messanger with uncommon philosophy of how you interact with it. In this app a thing around which everything revolves is a chat</p>
+                  <div className={`${styles.projects_tags_and_exploreBox}`}>
+                    <div className={`${styles.projects_tags}`}>
+                      <div className={`${styles.projects_tags_inner}`}>
+                        <div className={`${styles.projects_tags_item}`}>typescript</div>
+                        <div className={`${styles.projects_tags_item}`}>html</div>
+                        <div className={`${styles.projects_tags_item}`}>auth</div>
+                        <div className={`${styles.projects_tags_item}`}>css</div>
+                      </div>
+                    </div>
+                    <div className={`${styles.projects_explore_and_timeBox}`}>
+                      <Link href='/' className={`${styles.projects_exploreBtn}`}>Explore</Link>
+                      <div className={`${styles.projects_date}`}>2024-08-17</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={`${styles.projects_item}`}>
+                <div className={`${styles.projects_imgBox}`}>
+                  <Image width={289} height={200} alt='"direct chat" project' src='/direct-chat.png' />
+                </div>
+                <div className={`${styles.projects_infoBox}`}>
+                  <h3 className={`${styles.projects_title}`}>Direct Chat</h3>
+                  <p className={`${styles.projects_description}`}>Direct Chat is a powerful messanger with uncommon philosophy of how you interact with it. In this app a thing around which everything revolves is a chat</p>
+                  <div className={`${styles.projects_tags_and_exploreBox}`}>
+                    <div className={`${styles.projects_tags}`}>
+                      <div className={`${styles.projects_tags_inner}`}>
+                        <div className={`${styles.projects_tags_item}`}>typescript</div>
+                        <div className={`${styles.projects_tags_item}`}>html</div>
+                        <div className={`${styles.projects_tags_item}`}>auth</div>
+                        <div className={`${styles.projects_tags_item}`}>css</div>
+                      </div>
+                    </div>
+                    <div className={`${styles.projects_explore_and_timeBox}`}>
+                      <Link href='/' className={`${styles.projects_exploreBtn}`}>Explore</Link>
+                      <div className={`${styles.projects_date}`}>2024-08-17</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={`${styles.projects_item}`}>
+                <div className={`${styles.projects_imgBox}`}>
+                  <Image width={361} height={236} alt='"explore" project' src='/explore.png' />
+                </div>
+                <div className={`${styles.projects_infoBox}`}>
+                  <h3 className={`${styles.projects_title}`}>Explore Layout</h3>
+                  <p className={`${styles.projects_description}`}>Direct Chat is a powerful messanger with uncommon philosophy of how you interact with it. In this app a thing around which everything revolves is a chat</p>
+                  <div className={`${styles.projects_tags_and_exploreBox}`}>
+                    <div className={`${styles.projects_tags}`}>
+                      <div className={`${styles.projects_tags_inner}`}>
+                        <div className={`${styles.projects_tags_item}`}>typescript</div>
+                        <div className={`${styles.projects_tags_item}`}>html</div>
+                        <div className={`${styles.projects_tags_item}`}>auth</div>
+                        <div className={`${styles.projects_tags_item}`}>css</div>
+                      </div>
+                    </div>
+                    <div className={`${styles.projects_explore_and_timeBox}`}>
+                      <Link href='/' className={`${styles.projects_exploreBtn}`}>Explore</Link>
+                      <div className={`${styles.projects_date}`}>2024-08-17</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className={`${styles.info_card} gradient-border`}>
