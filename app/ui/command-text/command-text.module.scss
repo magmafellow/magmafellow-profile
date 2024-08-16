@@ -1,0 +1,17 @@
+// @import '../../variables.module.scss';
+
+
+.command {
+  display: flex;
+  gap: 6px;
+  flex-flow: row nowrap;
+  padding-left: 29px;
+  margin-bottom: 12px;
+
+  div:first-child {
+    font-weight: 500;
+  }
+  div:last-child {
+    font-weight: 600;
+  }
+}
