@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <div className={`${styles.outer_container} ${inter.className}`}>
 
-      <div style={{backdropFilter: 'blur(4px)'}} className='fixed z-10 text-sm px-2 flex justify-evenly items-center left-[50%] top-9 -translate-x-[50%] w-72 h-8 rounded-lg border border-slate-600'>
+      <div className='backdrop-blur-sm fixed z-10 text-sm px-2 flex justify-evenly items-center left-[50%] top-9 -translate-x-[50%] w-72 h-8 rounded-lg border border-slate-600'>
         <div className={`text-zinc-300`}>home</div>
         <div>blog</div>
         <div>projects</div>
