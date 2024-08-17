@@ -9,6 +9,8 @@ import { truncatePhrase } from '../lib/utils'
 import { inconsolata } from '../ui/fonts/inconsolata'
 import { Inter } from 'next/font/google'
 import CommandText from '@/app/ui/command-text/command-text'
+import NavString from '../ui/nav-string/nav-string'
+
 
 const inter = Inter({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['cyrillic', 'latin'] })
 
@@ -16,11 +18,8 @@ export default function Page() {
   return (
     <div className={`${styles.outer_container} ${inter.className}`}>
 
-      <div className='backdrop-blur-sm fixed z-10 text-sm px-2 flex justify-evenly items-center left-[50%] top-9 -translate-x-[50%] w-72 h-8 rounded-lg border border-slate-600'>
-        <div className={`text-zinc-300`}>home</div>
-        <div>blog</div>
-        <div>projects</div>
-      </div>
+
+      <NavString />
       
       <div className={`${styles.grid} min-h-[500px]`}>
         <div className={`${styles.stats}`}>

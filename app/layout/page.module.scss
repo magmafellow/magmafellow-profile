@@ -15,7 +15,7 @@
 .grid {
   display: grid;
   grid-template-columns: 290px 1fr 250px;
-  grid-template-rows: 400px 200vh;
+  grid-template-rows: 400px auto;
   grid-template-areas:
     'info_card profile stats'
     'info_card profile blogpost_tags';
@@ -275,7 +275,7 @@
     }
   }
   &_item {
-    background-color: $dark_post_bg;
+    background-color: $dark_project_tag_bg;
     font-size: 12px;
     padding: 4px;
     display: flex;
@@ -314,7 +314,7 @@
 
   &_em1 {
     color: $dark_h1_base;
-    color: $blue;
+    color: $dark_accent_02;
   }
   &_em2 {
     color: $dark_accent_01;
@@ -357,6 +357,19 @@
     &:hover {
       background-color: $dark_project_bg_onHover;
 
+      .projects_exploreBtn {
+        border: $dark_text_bright 1px solid;
+        color: $dark_text_bright;
+
+        &:hover {
+          color: $dark_base_bg;
+          text-decoration: underline;
+          background-color: $dark_text_bright;
+        }
+      }
+      .projects_title {
+        color: $dark_accent_02;
+      }
     }
   }
 
@@ -445,6 +458,34 @@
 @media (max-width: 1279px) {
   .grid {
     grid-template-columns: 250px 1fr 230px;
+    column-gap: 12px;
+  }
+}
+@media (max-width: 1279px) and (min-width: 912px) {
+  .projects {
+    &_item {
+      flex-flow: column nowrap;
+      height: auto;
+    }
+    &_imgBox {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+    &_title {
+      text-align: right;
+      padding-right: 30px;
+    }
+    &_description {
+      margin-bottom: 10px;
+    }
+    &_explore_and_timeBox {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -482,6 +523,54 @@
   }
   .profile {
     border: none;
+
+    &_projects {
+      padding: 0;
+
+      &_title, &_little {
+        padding: 0 10px;
+      }
+    }
+
+    &_me {
+      padding: 0 10px;
+    }
+  }
+
+  .projects {
+    &_item {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 777px) {
+  .projects {
+    &_item {
+      flex-flow: column nowrap;
+      height: auto;
+    }
+    &_imgBox {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+    &_infoBox {
+    }
+    &_title {
+      text-align: right;
+      padding-right: 30px;
+    }
+    &_description {
+      margin-bottom: 10px;
+    }
+    &_explore_and_timeBox {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 

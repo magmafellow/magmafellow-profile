@@ -1,24 +1,31 @@
-$dark_base_bg: #0B0D12;
+// $dark_base_bg: #0B0D12; old one
+$dark_base_bg: #0e0e0e;
 $dark_text_base: #8B8E9B;
 $dark_text_second: #5d5f68;
 $dark_h1_base: #B6B9C8;
 $dark_h2_base: #9EA1AE;
 // $dark_text_bright: #f48d8d;
-// $dark_text_bright: #ffda99;
-$dark_text_bright: #de5275;
-$dark_bg_second: #121319;
+$dark_text_bright: #f6bb42;
+// $dark_bg_second: #0d0f15; old one
+$dark_bg_second: $dark_base_bg;
+
 $dark_border_blocks: #222222;
-$dark_bg_second: #0d0f15;
 // $dark_accent_01: #BE123C;
 // $dark_accent_02: #6D28D9;
-$dark_accent_01: #de5275;
-$dark_accent_02: #8744f3;
+$dark_accent_01: #f6bb42;
+$dark_accent_02: #48cfad;
 $dark_post_bg: #232530;
 $dark_post_border: #474951;
 $dark_project_item_border: #222222;
 $dark_project_tag_bg: #171718;
-$dark_project_exploreBtn_bg: #121319;
+$dark_project_exploreBtn_bg: #1c1c1d;
 $dark_project_exploreBtn_text: $dark_post_border;
-$dark_project_bg_onHover: #121319;
+$dark_project_bg_onHover: #181819;
 // $blue: #385AEC;
+
+
+// abs colours
+$bitter_sweet_02: #fc6e51;
+$blue_jeans_01: #5d9cec;
+$lavander_01: #ac93ec;
 $blue: #607aec;
