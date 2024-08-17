@@ -10,7 +10,7 @@ import { inconsolata } from '../ui/fonts/inconsolata'
 import { Inter } from 'next/font/google'
 import CommandText from '@/app/ui/command-text/command-text'
 import NavString from '../ui/nav-string/nav-string'
-
+import { Suspense } from 'react'
 
 const inter = Inter({ weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'], subsets: ['cyrillic', 'latin'] })
 
@@ -149,7 +149,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className={`${styles.info_card} gradient-border`}>
+        <div className={`${styles.info_card}`}>
           <div className={`${styles.info_card__img_box}`}>
             <Image
               width={58}

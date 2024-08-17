@@ -1,17 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  box-sizing: border-box;
-}
 
 
-/* shim */
 .shim {
   position: relative;
   overflow: hidden;
 }
+
 .shim::before {
   position: absolute;
   content: '';
@@ -22,6 +15,7 @@
   animation: shimAnimate 1.3s ease-in 0s infinite normal both;
 
 }
+
 @keyframes shimAnimate {
   0% {
     left: -130%;
@@ -30,6 +24,9 @@
     left: 130%;
   }
 }
+
+
+// utility animation classes
 .an_fast {
   animation-duration: 0.3s;
 }
@@ -37,4 +34,4 @@
   animation-duration: 1.7s;
 }
 
-/* end shim */
+// end utility animation classes
