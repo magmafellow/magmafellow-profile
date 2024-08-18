@@ -3,6 +3,8 @@ import { Providers } from './ui/providers'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { roboto } from './ui/fonts/roboto'
+import styles from './page.module.scss'
+import NavString from './ui/nav-string/nav-string'
 
 export const runtime = 'nodejs'
 
@@ -21,8 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className}`}>
-        <Providers>{children}</Providers>
+      <body className={`${inter.className}`}>
+        <Providers>
+          <div className={`${styles.outer_container}`}>
+            <NavString />
+            <div className={`${styles.grid}`}>
+              {children}
+            </div>
+          </div>
+        </Providers>
       </body>
     </html>
   )

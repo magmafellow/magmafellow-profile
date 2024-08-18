@@ -1,0 +1,47 @@
+@import '../../variables.module.scss';
+
+
+.stats {
+  grid-area: stats;
+  background-color: $dark_bg_second;
+  height: 380px;
+  border-radius: 8px;
+  border: 1px solid $dark_border_blocks;
+}
+
+// stats box
+.stats {
+  padding-top: 20px;
+}
+
+.stats_number_box {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  row-gap: 16px;
+
+  margin-bottom: 20px;
+
+  &_item:first-child {
+    font-size: 27px;
+  }
+  &_item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    & .stats_value {
+      font-weight: 600;
+    }
+  }
+}
+// end stats box
+
+// media
+@media (max-width: 1179px) {
+  .stats {
+    display: none;
+  }
+}
+
+// end media

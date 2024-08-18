@@ -1,0 +1,50 @@
+
+.first_item {
+  svg {
+    font-size: 28px;
+  }
+}
+
+.middle_item {
+  span {
+    display: none;
+  }
+  svg {
+    font-size: 28px;
+  }
+}
+.container_middle {
+  gap: 20px;
+}
+
+.last_item {
+  svg {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .last_item {
+    display: none;
+  }
+}
+
+@media (min-width: 912px) {
+  .first_item {
+    display: none;
+  }
+}
+
+@media (min-width: 912px) {
+  .middle_item, .first_item, .last_item {
+    span {
+      display: inline;
+    }
+    svg {
+      font-size: 16px;
+    }
+  }
+  .container_middle {
+    gap: 6px;
+  }
+}
