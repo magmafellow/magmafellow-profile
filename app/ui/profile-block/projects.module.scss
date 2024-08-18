@@ -1,10 +1,8 @@
 // *** variables block ###
 @import '../../variables.module.scss';
 
-
 // *** utility block ###
 @import '../../utility.module.scss';
-
 
 // projects
 
@@ -29,6 +27,10 @@
         border: $dark_text_bright 1px solid;
         color: $dark_text_bright;
 
+        &_skeleton {
+          border: none;
+        }
+        
         &:hover {
           text-decoration: underline;
         }
@@ -52,13 +54,14 @@
     border-radius: 6px;
     overflow: hidden;
   }
-  &_imgBox img, &_imgBox .projects_img_skeleton {
+  &_imgBox img,
+  &_imgBox .projects_img_skeleton {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   &_imgBox .projects_img_skeleton {
-    background: #222;
+    background: #121212;
     object-fit: contain;
   }
   &_title {
@@ -139,7 +142,6 @@
     margin-bottom: 12px;
     transition: 0.17s;
     display: inline-block;
-
 
     &:hover {
       transform: translateY(-4px);
