@@ -1,0 +1,18 @@
+// ### variables block ***
+@import '../../variables.module.scss';
+
+// ### utility blocck ***
+@import '../../utility.module.scss';
+
+.bio_box {
+  &_title {
+    color: $dark_h2_base;
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 4px;
+  }
+  &_text {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+}

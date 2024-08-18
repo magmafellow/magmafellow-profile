@@ -1,0 +1,52 @@
+// ### variables block ***
+@import '../../variables.module.scss';
+
+// ### utility blocck ***
+@import '../../utility.module.scss';
+
+
+.info_card {
+  grid-area: info_card;
+  background-color: $dark_bg_second;
+  height: 360px;
+  border-radius: 8px;
+  border: 1px solid $dark_border_blocks;
+}
+
+// info card
+.info_card {
+  padding: 16px 12px;
+}
+.info_card__img_box {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 12px;
+
+  & img {
+    border-radius: 9999px;
+  }
+  & span {
+    flex: 1 0 auto;
+    margin-left: 16px;
+    color: $dark_h1_base;
+    font-weight: 600;
+  }
+}
+
+// end info card
+
+// media
+@media (max-width: 1006px) {
+  .info_card {
+    height: auto;
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 911px) {
+  .info_card {
+    display: none;
+  }
+}
+// end media

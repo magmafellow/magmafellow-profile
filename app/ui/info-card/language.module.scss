@@ -1,0 +1,25 @@
+// ### variables block ***
+@import '../../variables.module.scss';
+
+// ### utility blocck ***
+@import '../../utility.module.scss';
+
+
+.language {
+  &_list {
+    display: flex;
+    gap: 26px;
+  }
+  &_li {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    font-size: 14px;
+  }
+  &_label {
+    font-weight: 300;
+  }
+  &_value {
+    font-weight: 600;
+  }
+}

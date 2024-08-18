@@ -1,5 +1,8 @@
+// ### variables block ***
 @import '../../variables.module.scss';
 
+
+@import '../../utility.module.scss';
 
 .stats {
   grid-area: stats;
@@ -33,6 +36,14 @@
     & .stats_value {
       font-weight: 600;
     }
+
+    & .stats_value_skeleton {
+      border: 1px solid $dark_border_blocks;
+      width: 1.1em;
+      height: 1em;
+      background-color: $dark_post_bg;
+      border-radius: 8px;
+    }
   }
 }
 // end stats box
@@ -45,3 +56,11 @@
 }
 
 // end media
+
+
+
+
+
+
+
+

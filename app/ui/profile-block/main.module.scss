@@ -1,0 +1,65 @@
+// *** variables block ###
+@import '../../variables.module.scss';
+
+
+// *** utility block ###
+@import '../../utility.module.scss';
+
+
+.profile {
+  grid-area: profile;
+  // background-color: $dark_bg_second;
+  border-radius: 8px;
+  border: 1px solid $dark_border_blocks;
+}
+
+// profile
+
+.profile {
+  &_projects {
+    padding-left: 29px;
+
+    &_title {
+      font-size: 32px;
+      font-weight: 900;
+      letter-spacing: 0.023em;
+      color: $dark_text_bright;
+    }
+    &_little {
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.profile {
+  padding-top: 54px;
+}
+
+.profile_me {
+  padding: 0 29px;
+
+  h1 {
+    font-size: 37px;
+    font-weight: 900;
+    letter-spacing: 0.023em;
+    margin-bottom: 20px;
+    color: $dark_text_bright;
+  }
+
+  &_info {
+    margin-bottom: 28px;
+    font-size: 18px;
+  }
+
+  &_em1 {
+    color: $dark_h1_base;
+    color: $dark_accent_02;
+  }
+  &_em2 {
+    color: $dark_accent_01;
+    font-weight: 600;
+  }
+}
+
+// end profile

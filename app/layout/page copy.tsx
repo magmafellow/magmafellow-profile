@@ -276,77 +276,73 @@ export default function Page() {
             </div>
           </div>
         </div>
-          <div
-            className={`${styles.info_card}`}
-          >
-            <div className={`${styles.info_card__img_box}`}>
-              <Image
-                width={58}
-                height={58}
-                alt="profile image"
-                src="/carrot.jpg"
-              ></Image>
-              <span>@magmafellow</span>
-            </div>
-            <ul className={`${styles.media_list}`}>
-              <li className={`${styles.media_li}`}>
-                <Link
-                  href="https://t.me/polrekost"
-                  className={`${styles.media_link}`}
-                >
-                  <FaTelegramPlane className={`${styles.media_img}`} />
-                  <span className={`${styles.media_link_value}`}>
-                    polrekost
-                  </span>
-                </Link>
+        <div className={`${styles.info_card}`}>
+          <div className={`${styles.info_card__img_box}`}>
+            <Image
+              width={58}
+              height={58}
+              alt="profile image"
+              src="/carrot.jpg"
+            ></Image>
+            <span>@magmafellow</span>
+          </div>
+          <ul className={`${styles.media_list}`}>
+            <li className={`${styles.media_li}`}>
+              <Link
+                href="https://t.me/polrekost"
+                className={`${styles.media_link}`}
+              >
+                <FaTelegramPlane className={`${styles.media_img}`} />
+                <span className={`${styles.media_link_value}`}>polrekost</span>
+              </Link>
+            </li>
+            <li className={`${styles.media_li}`}>
+              <Link
+                href="mailto:magmafellow@gmail.com"
+                className={`${styles.media_link}`}
+              >
+                <IoMdMail className={`${styles.media_img}`} />
+                <span className={`${styles.media_link_value}`}>
+                  magmafellow@gmail.com
+                </span>
+              </Link>
+            </li>
+            <li className={`${styles.media_li}`}>
+              <Link
+                href="https://github.com/magmafellow"
+                className={`${styles.media_link}`}
+              >
+                <FaGithub className={`${styles.media_img}`} />
+                <span className={`${styles.media_link_value}`}>
+                  github.com/magmafellow
+                </span>
+              </Link>
+            </li>
+          </ul>
+          <div className={`${styles.delimiter} ${styles.mb_10px}`}></div>
+          <div className={`${styles.bio_box}`}>
+            <h2 className={`${styles.bio_box_title}`}>Bio</h2>
+            <p className={`${styles.bio_box_text}`}>
+              In IRL they call me alex. age of 19. I reside in Moscow, Russia.
+              Enjoy coding and software engineering
+            </p>
+          </div>
+          <div className={`${styles.delimiter} ${styles.mb_10px}`}></div>
+          <div className={`${styles.language}`}>
+            <ul className={`${styles.language_list}`}>
+              <li className={`${styles.language_li}`}>
+                <span className={`${styles.language_label}`}>en</span>
+                <span className={`${styles.language_delim}`}>-</span>
+                <span className={`${styles.language_value}`}>c2</span>
               </li>
-              <li className={`${styles.media_li}`}>
-                <Link
-                  href="mailto:magmafellow@gmail.com"
-                  className={`${styles.media_link}`}
-                >
-                  <IoMdMail className={`${styles.media_img}`} />
-                  <span className={`${styles.media_link_value}`}>
-                    magmafellow@gmail.com
-                  </span>
-                </Link>
-              </li>
-              <li className={`${styles.media_li}`}>
-                <Link
-                  href="https://github.com/magmafellow"
-                  className={`${styles.media_link}`}
-                >
-                  <FaGithub className={`${styles.media_img}`} />
-                  <span className={`${styles.media_link_value}`}>
-                    github.com/magmafellow
-                  </span>
-                </Link>
+              <li className={`${styles.language_li}`}>
+                <span className={`${styles.language_label}`}>ru</span>
+                <span className={`${styles.language_delim}`}>-</span>
+                <span className={`${styles.language_value}`}>fluent</span>
               </li>
             </ul>
-            <div className={`${styles.delimiter} ${styles.mb_10px}`}></div>
-            <div className={`${styles.bio_box}`}>
-              <h2 className={`${styles.bio_box_title}`}>Bio</h2>
-              <p className={`${styles.bio_box_text}`}>
-                In IRL they call me alex. age of 19. I reside in Moscow, Russia.
-                Enjoy coding and software engineering
-              </p>
-            </div>
-            <div className={`${styles.delimiter} ${styles.mb_10px}`}></div>
-            <div className={`${styles.language}`}>
-              <ul className={`${styles.language_list}`}>
-                <li className={`${styles.language_li}`}>
-                  <span className={`${styles.language_label}`}>en</span>
-                  <span className={`${styles.language_delim}`}>-</span>
-                  <span className={`${styles.language_value}`}>c2</span>
-                </li>
-                <li className={`${styles.language_li}`}>
-                  <span className={`${styles.language_label}`}>ru</span>
-                  <span className={`${styles.language_delim}`}>-</span>
-                  <span className={`${styles.language_value}`}>fluent</span>
-                </li>
-              </ul>
-            </div>
           </div>
+        </div>
       </div>
     </div>
   )
