@@ -19,8 +19,8 @@ export default function ProjectCard({
     <div className={`${styles.projects_item}`}>
       <div className={`${styles.projects_imgBox}`}>
         <Image
-          width={289}
-          height={200}
+          width={360}
+          height={236}
           alt={`${title} project`}
           src={`/${imagePath}`}
         />
