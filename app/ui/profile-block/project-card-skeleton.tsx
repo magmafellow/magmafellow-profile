@@ -16,7 +16,7 @@ export default function ProjectCardSkeleton() {
           <div className={`${styles.projects_tags}`}>
             <div className={`${styles.projects_tags_inner}`}>
               {[1, 2, 3, 4, 5].map((value) => (
-                <div className={`${styles.projects_tags_item} ${styles.projects_tags_item_skeleton} shim-carcass shim-effect animate an_slow`}></div>
+                <div key={value} className={`${styles.projects_tags_item} ${styles.projects_tags_item_skeleton} shim-carcass shim-effect animate an_slow`}></div>
               ))}
             </div>
           </div>

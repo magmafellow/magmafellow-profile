@@ -6,5 +6,5 @@ import ProjectCard from './project-card'
 export default async function ProjectsCardWrapper() {
   const projects = await getThreeLastProjects()
 
-  return projects.map((projectObj, index) => <ProjectCard {...projectObj} />)
+  return projects.map((projectObj, index) => <ProjectCard key={index} {...projectObj} />)
 }

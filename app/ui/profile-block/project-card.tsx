@@ -35,8 +35,8 @@ export default function ProjectCard({
         <div className={`${styles.projects_tags_and_exploreBox}`}>
           <div className={`${styles.projects_tags}`}>
             <div className={`${styles.projects_tags_inner}`}>
-              {tags.map((value) => (
-                <div className={`${styles.projects_tags_item}`}>{value}</div>
+              {tags.map((value, i) => (
+                <div key={i} className={`${styles.projects_tags_item}`}>{value}</div>
               ))}
             </div>
           </div>
