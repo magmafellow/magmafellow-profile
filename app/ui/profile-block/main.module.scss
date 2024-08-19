@@ -63,3 +63,23 @@
 }
 
 // end profile
+
+
+// media block
+@media (max-width: 911px) {
+  .profile {
+    border: none;
+
+    &_projects {
+      padding: 0;
+
+      &_title, &_little {
+        padding: 0 10px;
+      }
+    }
+
+    &_me {
+      padding: 0 10px;
+    }
+  }
+}

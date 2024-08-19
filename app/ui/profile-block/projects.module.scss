@@ -9,9 +9,9 @@
 .projects {
   &_item {
     display: flex;
+    flex-flow: row nowrap;
     gap: 12px;
     justify-content: center;
-    // align-items: center;
     height: 250px;
     padding: 6px 12px;
     margin-right: 16px;
@@ -156,3 +156,85 @@
 }
 
 // end projects
+
+// media block
+@media (max-width: 1279px) and (min-width: 912px) {
+  .projects {
+    &_item {
+      flex-flow: column nowrap;
+      height: auto;
+    }
+    &_imgBox {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+    &_title {
+      text-align: right;
+      padding-right: 30px;
+
+      &_skeleton {
+        width: 5em;
+        align-self: flex-end;
+      }
+    }
+    &_description {
+      margin-bottom: 10px;
+
+      &_skeleton {
+        height: 3.5em;
+      }
+    }
+    &_explore_and_timeBox {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &_imgBox &_img_skeleton {
+      height: 238px;
+    }
+  }
+}
+
+@media (max-width: 911px) {
+  .projects {
+    &_item {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 777px) {
+  .projects {
+    &_item {
+      flex-flow: column nowrap;
+      height: auto;
+    }
+    &_imgBox {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+    &_infoBox {
+    }
+    &_title {
+      text-align: right;
+      padding-right: 30px;
+    }
+    &_description {
+      margin-bottom: 10px;
+    }
+    &_explore_and_timeBox {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+// end media

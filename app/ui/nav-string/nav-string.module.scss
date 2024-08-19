@@ -1,7 +1,7 @@
 
 .first_item {
   svg {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 
@@ -10,7 +10,7 @@
     display: none;
   }
   svg {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
 .container_middle {
@@ -19,9 +19,11 @@
 
 .last_item {
   svg {
-    font-size: 28px;
+    font-size: 22px;
   }
 }
+
+
 
 @media (min-width: 1180px) {
   .last_item {

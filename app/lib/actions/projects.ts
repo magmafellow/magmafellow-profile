@@ -3,7 +3,7 @@ import projectsDataPlaceholder from "@/app/ui/profile-block/projects-data-placeh
 
 export async function getThreeLastProjects(){
   await new Promise((resolve, reject) => {
-    setTimeout(() => resolve(1), 2300)
+    setTimeout(() => resolve(1), 12300)
   })
 
   return projectsDataPlaceholder
