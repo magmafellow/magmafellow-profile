@@ -8,7 +8,7 @@ import Projects from './projects'
 export default async function ProfileBlock() {
   return (
     <div className={`${styles.profile}`}>
-      <CommandText path="#/home/magmafellow" command="whoami" />
+      <CommandText id='whoami' path="#/home/magmafellow" command="whoami" />
       <div className={`${styles.profile_me}`}>
         <h1 className={`${styles.profile_me_title}`}>
           Full-stack web Engineer
@@ -29,7 +29,7 @@ export default async function ProfileBlock() {
           contact me.
         </p>
       </div>
-      <CommandText path="#/home/magmafellow" command="whatareprojects" />
+      <CommandText id='whatareprojects' path="#/home/magmafellow" command="whatareprojects" />
       <div className={`${styles.profile_projects}`}>
         <h2 className={`${styles.profile_projects_title}`}>Projects</h2>
         <p className={`${styles.profile_projects_little} ${styles.p_limited}`}>

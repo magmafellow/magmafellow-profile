@@ -1,17 +1,23 @@
 // @import '../../variables.module.scss';
 
-
 .command {
-  display: flex;
-  gap: 6px;
-  flex-flow: row nowrap;
+  padding-top: 10px;
   padding-left: 29px;
   margin-bottom: 12px;
+  font-size: 18px;
 
   div:first-child {
     font-weight: 500;
   }
   div:last-child {
     font-weight: 600;
+  }
+
+  &_inner {
+    display: inline-flex;
+    padding: 2px 4px;
+    border-radius: 6px;
+    gap: 6px;
+    flex-flow: row nowrap;
   }
 }

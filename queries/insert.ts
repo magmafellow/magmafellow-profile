@@ -1,24 +1,34 @@
 import { db } from '../db'
-import { InsertPost, InsertUser, postsTable, usersTable } from '../schema'
+import {
+  InsertProject,
+  InsertProjectTag,
+  InsertTag,
+  InsertUser,
+  projectsTable,
+  projectsTagsTable,
+  SelectProject,
+  SelectProjectTag,
+  SelectTag,
+  SelectUser,
+  tagsTable,
+  usersTable,
+} from '../schema'
+
+
+export async function createProject(data: InsertProject) {
+  const res = await db.insert(projectsTable).values(data)
+}
 
 export async function createUser(data: InsertUser) {
-  await db.insert(usersTable).values(data)
+  const res = await db.insert(usersTable).values(data)
 }
 
-export async function createPost(data: InsertPost) {
-  await db.insert(postsTable).values(data)
+export async function createTag(data: InsertTag) {
+  const res = await db.insert(tagsTable).values(data)
 }
 
-async function makeQueryCreateUser(){
-  const alex = {
-    name: 'alex',
-    email: 'lekha2000a@mail.ru',
-    age: 19,
-  }
-
-  const r = await createUser(alex)
-  console.log('=> create user request')
-
+export async function createProjectTag(data: InsertProjectTag) {
+  const res = await db.insert(projectsTagsTable).values(data)
 }
 
-makeQueryCreateUser()
+

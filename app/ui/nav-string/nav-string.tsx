@@ -8,7 +8,7 @@ import styles from './nav-string.module.scss'
 
 export default function NavString() {
   return (
-    <div className="fixed flex items-stretch gap-2 z-10 top-9 left-[50%] -translate-x-[50%]">
+    <div className="fixed flex items-stretch gap-2 z-10 top-5 md:top-9 left-[50%] -translate-x-[50%]">
       <div className={`${styles.first_item} overflow-hidden backdrop-blur-sm rounded-lg border border-slate-600`}>
         <div className={`hover:bg-zinc-700 cursor-pointer text-zinc-300 flex gap-2 items-center h-full px-4`}>
           <FaRegAddressCard />
