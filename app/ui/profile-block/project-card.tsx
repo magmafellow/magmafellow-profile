@@ -1,47 +1,48 @@
 import Image from 'next/image'
 import styles from './projects.module.scss'
 import Link from 'next/link'
+import { getAllTagsByProjectId } from '@/app/lib/actions/projects'
 
-export default function ProjectCard({
-  title,
+export default async function ProjectCard({
+  id,
+  name,
   description,
-  imagePath,
-  tags,
-  projectURL,
+  features,
+  pictures,
+  resume
 }: {
-  title: string
+  id: number
+  name: string
   description: string
-  imagePath: string
-  tags: string[]
-  projectURL: string
+  features: any
+  pictures: any
+  resume: string
 }) {
+  const tags = await getAllTagsByProjectId(id, 7)
+  
   return (
     <div className={`${styles.projects_item}`}>
       <div className={`${styles.projects_imgBox}`}>
         <Image
           width={360}
           height={236}
-          alt={`${title} project`}
-          src={`/${imagePath}`}
+          alt={`${name} project`}
+          src={`/${pictures[0]}.png`}
         />
       </div>
       <div className={`${styles.projects_infoBox}`}>
-        <h3 className={`${styles.projects_title}`}>Design think</h3>
-        <p className={`${styles.projects_description}`}>
-          Direct Chat is a powerful messanger with uncommon philosophy of how
-          you interact with it. In this app a thing around which everything
-          revolves is a chat
-        </p>
+        <h3 className={`${styles.projects_title}`}>{name}</h3>
+        <p className={`${styles.projects_description}`}>{description}</p>
         <div className={`${styles.projects_tags_and_exploreBox}`}>
           <div className={`${styles.projects_tags}`}>
             <div className={`${styles.projects_tags_inner}`}>
               {tags.map((value, i) => (
-                <div key={i} className={`${styles.projects_tags_item}`}>{value}</div>
+                <div key={i} className={`${styles.projects_tags_item}`}>{value.tags_table?.name}</div>
               ))}
             </div>
           </div>
           <div className={`${styles.projects_explore_and_timeBox}`}>
-            <Link href={`/${projectURL}`} className={`${styles.projects_exploreBtn}`}>
+            <Link href={`/`} className={`${styles.projects_exploreBtn}`}>
               Explore
             </Link>
             <div className={`${styles.projects_date}`}>2024-08-17</div>

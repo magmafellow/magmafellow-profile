@@ -14,7 +14,7 @@ export default async function Stats() {
         <div className={`${styles.stats_number_box_item}`}>
           <IoStatsChart />
         </div>
-        <Suspense fallback={<NumbersSkeleton></NumbersSkeleton>}>
+        <Suspense fallback={<NumbersSkeleton />}>
           <Numbers />
         </Suspense>
       </div>

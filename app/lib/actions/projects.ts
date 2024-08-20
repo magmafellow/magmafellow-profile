@@ -1,10 +1,32 @@
-import projectsDataPlaceholder from "@/app/ui/profile-block/projects-data-placeholder"
+import { asc, between, count, eq, getTableColumns, sql } from 'drizzle-orm'
+import projectsDataPlaceholder from '@/app/ui/profile-block/projects-data-placeholder'
+import { unstable_noStore } from 'next/cache'
+import { db } from '@/db'
+import { projectsTable, projectsTagsTable, tagsTable } from '@/schema'
 
+export async function getThreeLastProjectsPlaceholder() {
+  unstable_noStore()
 
-export async function getThreeLastProjects(){
-  await new Promise((resolve, reject) => {  // artificial delay
+  await new Promise((resolve, reject) => {
+    // artificial delay
     setTimeout(() => resolve(1), 3000)
   })
 
   return projectsDataPlaceholder
+}
+
+export async function getThreeLastProjects() {
+  const res = await db.select().from(projectsTable).limit(3)
+  return res
+}
+
+export async function getAllTagsByProjectId(projectId: number, limit?: number) {
+  // const res = await db.select().from(projectsTagsTable).where(eq(projectsTagsTable.project_id, projectId)).limit(limit ? limit : 999)
+  const res = await db.select().from(projectsTagsTable).leftJoin(tagsTable, eq(projectsTagsTable.tag_id, tagsTable.id)).where(eq(projectsTagsTable.project_id, projectId)).limit(limit ? limit : 999)
+  return res
+}
+
+export async function getTotalProjectsNumber(){
+  const res = await db.select({ count: count() }).from(projectsTable)
+  return res[0].count
 }

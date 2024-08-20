@@ -1,5 +1,5 @@
 {
-  "id": "59a7c5a6-f072-4f00-9f40-ca7a8aab623e",
+  "id": "e8467696-c28e-4f80-a7f5-a6341d66e699",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -10,7 +10,7 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "serial",
+          "type": "integer",
           "primaryKey": true,
           "notNull": true
         },
@@ -30,7 +30,7 @@
           "name": "features",
           "type": "json",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "resumte": {
           "name": "resumte",
@@ -50,18 +50,101 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
+    "public.projects_tags_table": {
+      "name": "projects_tags_table",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "project_id": {
+          "name": "project_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tag_id": {
+          "name": "tag_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "projects_tags_table_project_id_projects_table_id_fk": {
+          "name": "projects_tags_table_project_id_projects_table_id_fk",
+          "tableFrom": "projects_tags_table",
+          "tableTo": "projects_table",
+          "columnsFrom": [
+            "project_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        },
+        "projects_tags_table_tag_id_tags_table_id_fk": {
+          "name": "projects_tags_table_tag_id_tags_table_id_fk",
+          "tableFrom": "projects_tags_table",
+          "tableTo": "tags_table",
+          "columnsFrom": [
+            "tag_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "set null",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "public.tags_table": {
+      "name": "tags_table",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "description": {
+          "name": "description",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
     "public.users_table": {
       "name": "users_table",
       "schema": "",
       "columns": {
         "id": {
           "name": "id",
-          "type": "uuid",
+          "type": "integer",
           "primaryKey": true,
           "notNull": true
         },
-        "name": {
-          "name": "name",
+        "username": {
+          "name": "username",
           "type": "text",
           "primaryKey": false,
           "notNull": true

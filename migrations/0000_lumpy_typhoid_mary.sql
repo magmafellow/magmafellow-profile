@@ -1,13 +1,30 @@
+CREATE TABLE IF NOT EXISTS "projects_table" (
+	"id" integer PRIMARY KEY NOT NULL,
+	"name" text NOT NULL,
+	"description" text NOT NULL,
+	"features" json NOT NULL,
+	"resumte" text NOT NULL,
+	"pictures" json NOT NULL
+);
+--> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "projects_tags_table" (
-	"id" serial PRIMARY KEY NOT NULL,
+	"id" integer PRIMARY KEY NOT NULL,
 	"project_id" integer,
 	"tag_id" integer
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "tags_table" (
-	"id" serial PRIMARY KEY NOT NULL,
+	"id" integer PRIMARY KEY NOT NULL,
 	"name" text NOT NULL,
 	"description" text
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "users_table" (
+	"id" integer PRIMARY KEY NOT NULL,
+	"username" text NOT NULL,
+	"password" text NOT NULL,
+	"email" text NOT NULL,
+	CONSTRAINT "users_table_email_unique" UNIQUE("email")
 );
 --> statement-breakpoint
 DO $$ BEGIN

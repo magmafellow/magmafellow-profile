@@ -9,29 +9,29 @@ import {
 } from 'drizzle-orm/pg-core'
 
 export const projectsTable = pgTable('projects_table', {
-  id: serial('id').primaryKey(),
+  id: integer('id').primaryKey(),
   name: text('name').notNull(),
   description: text('description').notNull(),
-  features: text('features').notNull(), // fiatures json object
+  features: json('features').notNull(), // fiatures json object
   resume: text('resumte').notNull(),
-  pictures: text('pictures').notNull(), // pictures array
+  pictures: json('pictures').notNull(), // pictures array
 })
 
 export const usersTable = pgTable('users_table', {
-  id: uuid('id').primaryKey(),
-  name: text('name').notNull(),
+  id: integer('id').primaryKey(),
+  username: text('username').notNull(),
   password: text('password').notNull(),
   email: text('email').notNull().unique(),
 })
 
 export const tagsTable = pgTable('tags_table', {
-  id: serial('id').primaryKey(),
+  id: integer('id').primaryKey(),
   name: text('name').notNull(),
   description: text('description'),
 })
 
 export const projectsTagsTable = pgTable('projects_tags_table', {
-  id: serial('id').primaryKey(),
+  id: integer('id').primaryKey(),
   project_id: integer('project_id').references(() => projectsTable.id, {
     onDelete: 'set null',
   }),

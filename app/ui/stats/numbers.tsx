@@ -1,21 +1,26 @@
 import getStats from '@/app/lib/actions/stats'
 import styles from './main.module.scss'
+import { getTotalProjectsNumber } from '@/app/lib/actions/projects'
+import { getTotalBlogsNumber } from '@/app/lib/actions/blog'
+import getTotalAbroad from '@/app/lib/actions/abroad'
 
 export default async function Numbers() {
-  const statsObj = await getStats()
+  const totalProjects = await getTotalProjectsNumber()
+  const totalAbroad = await getTotalAbroad()
+  const totalBlogs = await getTotalBlogsNumber()
   
   return (
     <>
       <div className={`${styles.stats_number_box_item}`}>
-        <span className={`${styles.stats_value}`}>{statsObj.projects}</span>
+        <span className={`${styles.stats_value}`}>{totalProjects}</span>
         <span className={`${styles.stats_label}`}>Projects</span>
       </div>
       <div className={`${styles.stats_number_box_item}`}>
-        <span className={`${styles.stats_value}`}>{statsObj.blogs}</span>
+        <span className={`${styles.stats_value}`}>{totalBlogs}</span>
         <span className={`${styles.stats_label}`}>Blogs</span>
       </div>
       <div className={`${styles.stats_number_box_item}`}>
-        <span className={`${styles.stats_value}`}>{statsObj.abroad}</span>
+        <span className={`${styles.stats_value}`}>{totalAbroad}</span>
         <span className={`${styles.stats_label}`}>times abroad :3</span>
       </div>
     </>
