@@ -1,0 +1,138 @@
+// *** variables block ###
+@import '../../variables.module.scss';
+
+// *** utility block ###
+@import '../../utility.module.scss';
+
+
+.blog {
+  grid-area: profile;  // to match grid area with initial profile property. may be to be fixed to imporove semantics
+  border-radius: 8px;
+  border: 1px solid $dark_border_blocks;
+}
+
+.blog {
+  padding-top: 54px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  &_box_title_add {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 29px;
+    padding-right: 29px;
+    margin-bottom: 12px;
+  }
+  &_page_title {
+    font-weight: 600;
+    font-size: 32px;
+    color: $dark_accent_01;
+  }
+  &_addBtn {
+    font-size: 2rem;
+    transition: 0.17s;
+    color: $dark_text_second;
+    cursor: pointer;
+
+    &:hover {
+      color: $dark_accent_02
+    }
+  }
+
+  &_item {
+    border: 1px solid $dark_border_blocks;
+    padding: 8px 12px;
+    margin-bottom: 24px;
+    border-radius: 6px;
+    min-height: 180px;
+    display: flex;
+    flex-flow: column nowrap;
+    
+    &_title {
+      font-size: 24px;
+      font-weight: 500;
+      color: $dark_h1_base;
+      margin-bottom: 0px;
+    }
+    &_bite {
+      padding-bottom: 4px;
+      flex: 1 1 auto;
+      padding-left: 10px;
+      padding-right: 20px;
+      margin: 0 auto;
+      margin-bottom: 12px;
+      font-weight: 300;
+      &::first-letter {
+        padding-left: 1rem;
+        font-size: 28px;
+        font-weight: 700;
+        color: rgb(152, 3, 3);
+      }
+    }
+    &_box_date_tags_btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &_box_date {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+
+      &_date {
+        font-size: 14px;
+        color: $dark_text_second;
+      }
+      
+      svg {
+        font-size: 20px;
+        color: $dark_text_second;
+      }
+    }
+    &_box_tags {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row wrap;
+      max-width: 300px;
+      row-gap: 4px;
+      column-gap: 6px;
+
+      &_tag {
+        background-color: $dark_project_tag_bg;
+        font-size: 14px;
+        padding: 4px 6px;
+        border-radius: 8px;
+        color: $dark_text_base;
+      }
+    }
+
+    &_box_btn {
+      &_btn {
+        background-color: $dark_project_tag_bg;
+        padding: 12px 16px;
+        transition: 0.17s;
+
+        &:hover {
+          color: $dark_accent_02;
+        }
+      }
+    }
+    
+  }
+}
+
+
+
+@media (max-width: 911px) {
+  .blog {
+    border: none;
+  }
+}
+
+
+
+.bg_dark {
+  background-color: $dark_post_border;
+}

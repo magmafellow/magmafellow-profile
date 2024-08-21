@@ -8,7 +8,6 @@
 
 .profile {
   grid-area: profile;
-  // background-color: $dark_bg_second;
   border-radius: 8px;
   border: 1px solid $dark_border_blocks;
 }
@@ -16,6 +15,8 @@
 // profile
 
 .profile {
+  padding-top: 54px;
+
   &_projects {
     padding-left: 29px;
 
@@ -30,10 +31,6 @@
       margin-bottom: 30px;
     }
   }
-}
-
-.profile {
-  padding-top: 54px;
 }
 
 .profile_me {
