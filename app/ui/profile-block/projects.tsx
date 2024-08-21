@@ -13,7 +13,7 @@ export default async function Projects() {
   return (
     <div className={`${styles.projects}`}>
       <Suspense
-        fallback={<ProjectsCardWrapperSkeleton></ProjectsCardWrapperSkeleton>}
+        fallback={<ProjectsCardWrapperSkeleton number={3}></ProjectsCardWrapperSkeleton>}
       >
         <ProjectsCardWrapper />
       </Suspense>

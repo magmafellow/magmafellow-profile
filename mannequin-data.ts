@@ -133,3 +133,13 @@ export const users: InsertUser[] = [
     password: 'test',
   },
 ]
+
+export const blogs = [
+  {
+    id: 8001,
+    title: 'How to preview Next.js application on phone?',
+    bite: 'Did you once want to check your running Next.js application on phone? I did but it was not easy to find the solution. So far how create-react-app provides this out-of-the-box in Next.js You might struggle a lot before you know how to to do so. In this article I talk about this thing',
+    date: '17 Fri August',
+    tags: ['next.js', 'tricks', 'mobile'],
+  },
+]

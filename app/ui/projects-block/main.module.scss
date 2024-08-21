@@ -4,13 +4,13 @@
 // *** utility block ###
 @import '../../utility.module.scss';
 
-.blog {
+.projects {
   grid-area: profile; // to match grid area with initial profile property. may be to be fixed to imporove semantics
   border-radius: 8px;
   border: 1px solid $dark_border_blocks;
 }
 
-.blog {
+.projects {
   padding-top: 54px;
   padding-left: 10px;
   padding-right: 10px;
@@ -139,7 +139,7 @@
 }
 
 @media (max-width: 1179px) {
-  .blog {
+  .projects {
     &_item {
       &_bite {
         max-width: 730px;
@@ -149,13 +149,13 @@
 }
 
 @media (max-width: 911px) {
-  .blog {
+  .projects {
     border: none;
   }
 }
 
 @media (max-width: 499px) {
-  .blog {
+  .projects {
     padding-left: 0;
     padding-right: 0;
 
@@ -172,7 +172,7 @@
 }
 
 @media (max-width: 455px) {
-  .blog {
+  .projects {
     &_page_title {
       font-size: 28px;
     }
@@ -194,7 +194,7 @@
 }
 
 @media (max-width: 396px) {
-  .blog {
+  .projects {
     &_box_title_add {
       gap: 8px;
       padding-left: 12px;
@@ -206,7 +206,7 @@
 }
 
 @media (max-width: 343px) {
-  .blog {
+  .projects {
     &_box_title_add {
       gap: 4px;
       padding-left: 6px;
@@ -215,8 +215,4 @@
       font-size: 22px;
     }
   }
-}
-
-.bg_dark {
-  background-color: $dark_post_border;
 }

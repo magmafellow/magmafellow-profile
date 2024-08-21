@@ -20,6 +20,11 @@ export async function getThreeLastProjects() {
   return res
 }
 
+export async function getLastProjects(limit: number | undefined) {
+  const res = await db.select().from(projectsTable).limit(limit ? limit : 99)
+  return res
+}
+
 export async function getAllTagsByProjectId(projectId: number, limit?: number) {
   // const res = await db.select().from(projectsTagsTable).where(eq(projectsTagsTable.project_id, projectId)).limit(limit ? limit : 999)
   const res = await db.select().from(projectsTagsTable).leftJoin(tagsTable, eq(projectsTagsTable.tag_id, tagsTable.id)).where(eq(projectsTagsTable.project_id, projectId)).limit(limit ? limit : 999)
