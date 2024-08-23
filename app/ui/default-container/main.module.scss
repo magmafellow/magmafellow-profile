@@ -1,0 +1,47 @@
+@import '../../variables.module.scss';
+@import '../../utility.module.scss';
+
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 500px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+@media (min-width: 608px) {
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media (min-width: 708px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media (min-width: 823px) {
+  .container {
+    max-width: 815px;
+  }
+}
+
+@media (min-width: 1046px) {
+  .container {
+    max-width: 1038px;
+  }
+}
+
+@media (min-width: 1348px) {
+  .container {
+    max-width: 1340px;
+  }
+}
+
+@media (min-width: 1506px) {
+  .container {
+    max-width: 1498px;
+  }
+}

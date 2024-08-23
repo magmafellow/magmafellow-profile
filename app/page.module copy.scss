@@ -44,6 +44,10 @@
   .grid {
     grid-template-columns: 248px 1fr;
   }
+  .info_card {
+    height: auto;
+    max-height: 380px;
+  }
 }
 
 @media (max-width: 911px) {
@@ -52,10 +56,60 @@
     grid-template-rows: auto;
     grid-template-areas: 'profile';
   }
+  .info_card {
+    display: none;
+  }
+  .profile {
+    border: none;
+
+    &_projects {
+      padding: 0;
+
+      &_title, &_little {
+        padding: 0 10px;
+      }
+    }
+
+    &_me {
+      padding: 0 10px;
+    }
+  }
+
+  .projects {
+    &_item {
+      margin-right: 0;
+    }
+  }
 }
 
 @media (max-width: 777px) {
-  
+  .projects {
+    &_item {
+      flex-flow: column nowrap;
+      height: auto;
+    }
+    &_imgBox {
+      max-width: 550px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 12px;
+    }
+    &_infoBox {
+    }
+    &_title {
+      text-align: right;
+      padding-right: 30px;
+    }
+    &_description {
+      margin-bottom: 10px;
+    }
+    &_explore_and_timeBox {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
 // end media

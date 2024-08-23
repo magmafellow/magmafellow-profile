@@ -40,6 +40,11 @@ export const projectsTagsTable = pgTable('projects_tags_table', {
   }),
 })
 
+export const blogsTable = pgTable('blogs_table', {
+  id: integer('id').primaryKey(),
+  
+})
+
 export type InsertUser = typeof usersTable.$inferInsert
 export type SelectUser = typeof usersTable.$inferSelect
 

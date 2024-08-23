@@ -1,4 +1,4 @@
-@import './variables.module.scss';
+@import '../../variables.module.scss';
 
 .outer_container {
   background-color: $dark_base_bg;
@@ -19,7 +19,7 @@
   grid-template-areas:
     'info_card profile stats'
     'info_card profile blogpost_tags';
-  column-gap: 24px;
+  column-gap: 8px;
 }
 
 // media

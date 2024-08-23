@@ -2,11 +2,9 @@ import Link from 'next/link'
 import CommandText from '../command-text/command-text'
 import styles from './main.module.scss'
 import { FaCirclePlus } from 'react-icons/fa6'
-import { BsCalendarDate } from 'react-icons/bs'
-import { CiCalendar } from "react-icons/ci";
-import { FaRegCalendarCheck } from "react-icons/fa6";
-import { IoIosCalendar } from "react-icons/io";
-import BlogItem from './blog-item'
+import { Suspense } from 'react'
+import BlogItemWrapper from './blog-item-wrapper'
+import BlogItemWrapperSkeleton from './blog-item-wrapper-skeleton'
 
 
 export default async function BlogBlock() {
@@ -21,9 +19,9 @@ export default async function BlogBlock() {
       </div>
       <div className={`${styles.blogs}`}>
         
-        <BlogItem />
-        <BlogItem />
-        <BlogItem />
+        <Suspense fallback={<BlogItemWrapperSkeleton limit={3} />}>
+          <BlogItemWrapper limit={99} />
+        </Suspense>
 
       </div>
     </div>

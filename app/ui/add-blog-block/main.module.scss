@@ -1,0 +1,23 @@
+// *** variables block ###
+@import '../../variables.module.scss';
+
+
+// *** utility block ###
+@import '../../utility.module.scss';
+
+
+
+.add {
+  padding-top: 1rem;
+  
+  &_page {
+    &_title {
+      font-size: 26px;
+      font-weight: 600;
+    }
+    &_description {
+      font-size: 14px;
+      font-style: italic;
+    }
+  }
+}

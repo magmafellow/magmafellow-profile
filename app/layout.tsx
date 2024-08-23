@@ -26,12 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         <Providers>
-          <div className={`${styles.outer_container}`}>
-            <NavString />
-            <div className={`${styles.grid}`}>
-              {children}
-            </div>
-          </div>
+          {children}
         </Providers>
       </body>
     </html>
