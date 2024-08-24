@@ -1,3 +1,5 @@
+'use server'
+
 import { asc, between, count, eq, getTableColumns, sql } from 'drizzle-orm'
 import projectsDataPlaceholder from '@/app/ui/profile-block/projects-data-placeholder'
 import { unstable_noStore } from 'next/cache'

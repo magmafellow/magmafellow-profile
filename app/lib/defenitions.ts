@@ -15,3 +15,9 @@ export const updateProfileSchema = z.object({
   name: z.string().min(3),
   pseudonim: z.string().min(3)
 })
+
+export const blogCreateSchema = z.object({
+  title: z.string().min(5),
+  bite: z.string().min(10),
+  content: z.string().min(30)
+})

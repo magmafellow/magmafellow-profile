@@ -5,6 +5,7 @@ import { FaCirclePlus } from 'react-icons/fa6'
 import { Suspense } from 'react'
 import BlogItemWrapper from './blog-item-wrapper'
 import BlogItemWrapperSkeleton from './blog-item-wrapper-skeleton'
+import { findHighestIdFromBlogs } from '@/app/lib/actions/blogs'
 
 
 export default async function BlogBlock() {

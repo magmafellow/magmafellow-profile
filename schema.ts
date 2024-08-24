@@ -1,3 +1,4 @@
+import { sql } from 'drizzle-orm'
 import {
   integer,
   pgTable,
@@ -6,6 +7,7 @@ import {
   timestamp,
   json,
   uuid,
+  date,
 } from 'drizzle-orm/pg-core'
 
 export const projectsTable = pgTable('projects_table', {
@@ -42,7 +44,20 @@ export const projectsTagsTable = pgTable('projects_tags_table', {
 
 export const blogsTable = pgTable('blogs_table', {
   id: integer('id').primaryKey(),
-  
+  title: text('title').notNull(),
+  bite: text('bite').notNull(),
+  date_created: timestamp('date_created').defaultNow().notNull(),
+  content: text('content').notNull(),
+})
+
+export const blogsTagsTable = pgTable('blogs_tags_table', {
+  id: integer('id').primaryKey(),
+  blog_id: integer('blog_id').references(() => blogsTable.id, {
+    onDelete: 'set null',
+  }),
+  tag_id: integer('tag_id').references(() => tagsTable.id, {
+    onDelete: 'set null',
+  }),
 })
 
 export type InsertUser = typeof usersTable.$inferInsert
@@ -56,6 +71,12 @@ export type SelectTag = typeof tagsTable.$inferSelect
 
 export type InsertProjectTag = typeof projectsTagsTable.$inferInsert
 export type SelectProjectTag = typeof projectsTagsTable.$inferSelect
+
+export type InsertBlog = typeof blogsTable.$inferInsert
+export type SelectBlog = typeof blogsTable.$inferSelect
+
+export type InsertBlogTag = typeof blogsTagsTable.$inferInsert
+export type SelectBlogTag = typeof blogsTagsTable.$inferSelect
 
 // example code
 // export const usersTable = pgTable('users_table', {

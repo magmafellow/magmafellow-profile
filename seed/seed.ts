@@ -1,6 +1,10 @@
+'use server'
+
 import { unstable_noStore } from 'next/cache'
-import { projects, projectsTags, tags, users } from '../mannequin-data'
+import { blogs, blogsTags, projects, projectsTags, tags, users } from '../mannequin-data'
 import {
+  createBlog,
+  createBlogTag,
   createProject,
   createProjectTag,
   createTag,
@@ -37,6 +41,21 @@ export async function addMannequinUsers() {
   console.log('Mannequin Users were SUCCESSFULY added')
 }
 
+export async function addMannequinBlogs() {
+  unstable_noStore()
+
+  const res = await Promise.all(blogs.map((value) => createBlog(value)))
+  console.log('Mannequin Blogs were SUCCESSFULY added')
+}
+
+export async function addMannequinBlogsTags() {
+  unstable_noStore()
+
+  const res = await Promise.all(blogsTags.map((value) => createBlogTag(value)))
+  console.log('Mannequin BlogsTags were SUCCESSFULY added')
+}
+
+
 export async function addAllMannequinData() {
   unstable_noStore()
 
@@ -44,8 +63,10 @@ export async function addAllMannequinData() {
     addMannequinProjects(),
     addMannequinTags(),
     addMannequinUsers(),
+    addMannequinBlogs(),
   ])
   const res2 = await addMannequinProjectsTags()
+  const res3 = await addMannequinBlogsTags()
 
   console.log('Added All Mannequin Data Successfuly')
 }

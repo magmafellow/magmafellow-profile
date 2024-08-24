@@ -1,3 +1,5 @@
+'use server'
+
 export default async function getStats() {
   const [projects, blogs, abroad] = await Promise.all([
     getTotalProjects(),

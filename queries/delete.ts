@@ -1,6 +1,8 @@
 import { db } from '../db'
 import { eq } from 'drizzle-orm'
 import {
+  blogsTable,
+  blogsTagsTable,
   projectsTable,
   projectsTagsTable,
   SelectUser,
@@ -43,6 +45,20 @@ export async function deleteAllProjectsTags() {
   console.log('All ProjectsTags were deleted')
 }
 
+export async function deleteAllBlogs() {
+  unstable_noStore()
+
+  const res = await db.delete(blogsTable)
+  console.log('All Blogs were deleted')
+}
+
+export async function deleteAllBlogsTags() {
+  unstable_noStore()
+
+  const res = await db.delete(blogsTagsTable)
+  console.log('All BlogsTags were deleted')
+}
+
 export async function deleteAllTablesData() {
   unstable_noStore()
   
@@ -51,6 +67,8 @@ export async function deleteAllTablesData() {
     deleteAllUsers(),
     deleteAllTags(),
     deleteAllProjectsTags(),
+    deleteAllBlogs(),
+    deleteAllBlogsTags(),
   ])
 
   console.log('All data was deleted. Database and Tables are still there')
