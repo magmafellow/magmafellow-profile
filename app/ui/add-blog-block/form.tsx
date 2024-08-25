@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import styles from './form.module.scss'
+import Script from 'next/script'
 
 export default function Form() {
   const [mounted, setMounted] = useState(false)
@@ -40,7 +41,7 @@ export default function Form() {
   
   return (
     <form id='blog_id' name='blog_form' className={`${styles.form}`} action="">
-      <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.36.0/src/ace.js"></script>
+      <script async src="https://cdn.jsdelivr.net/npm/ace-builds@1.36.0/src/ace.js"></script>
       <div>
         <label htmlFor="title">title</label>
       </div>
