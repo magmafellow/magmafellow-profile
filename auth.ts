@@ -6,8 +6,6 @@ import PostgresAdapter from '@auth/pg-adapter'
 import { getUserViaPseudonim, insertPerson, isHeNew } from './app/lib/actions'
 import Discord from 'next-auth/providers/discord'
 
-export const runtime = 'nodejs'
-
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Discord,

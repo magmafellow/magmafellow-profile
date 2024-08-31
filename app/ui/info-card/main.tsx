@@ -7,7 +7,7 @@ import MediaList from './media-list'
 import BioBox from './bio-box'
 import LanguageBox from './language'
 
-export default async function InfoCard() {
+export default function InfoCard() {
   return (
     <div className={`${styles.info_card}`}>
       <div className={`${styles.info_card__img_box}`}>
