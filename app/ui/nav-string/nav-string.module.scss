@@ -12,9 +12,11 @@
   svg {
     font-size: 22px;
   }
+
+  padding: 8px 16px;
 }
 .container_middle {
-  gap: 20px;
+  gap: 0;
 }
 
 .last_item {
@@ -23,7 +25,9 @@
   }
 }
 
-
+.first_btn {
+  padding: 8px 16px;
+}
 
 @media (min-width: 1180px) {
   .last_item {
@@ -35,9 +39,7 @@
   .first_item {
     display: none;
   }
-}
 
-@media (min-width: 912px) {
   .middle_item, .first_item, .last_item {
     span {
       display: inline;
@@ -46,6 +48,11 @@
       font-size: 16px;
     }
   }
+
+  .middle_item {
+    padding: 6px 12px;
+  }
+  
   .container_middle {
     gap: 6px;
   }

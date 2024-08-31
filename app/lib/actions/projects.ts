@@ -18,22 +18,30 @@ export async function getThreeLastProjectsPlaceholder() {
 }
 
 export async function getThreeLastProjects() {
+  unstable_noStore()
+  
   const res = await db.select().from(projectsTable).limit(3)
   return res
 }
 
 export async function getLastProjects(limit: number | undefined) {
+  unstable_noStore()
+  
   const res = await db.select().from(projectsTable).limit(limit ? limit : 99)
   return res
 }
 
 export async function getAllTagsByProjectId(projectId: number, limit?: number) {
+  unstable_noStore()
+  
   // const res = await db.select().from(projectsTagsTable).where(eq(projectsTagsTable.project_id, projectId)).limit(limit ? limit : 999)
   const res = await db.select().from(projectsTagsTable).leftJoin(tagsTable, eq(projectsTagsTable.tag_id, tagsTable.id)).where(eq(projectsTagsTable.project_id, projectId)).limit(limit ? limit : 999)
   return res
 }
 
 export async function getTotalProjectsNumber(){
+  unstable_noStore()
+  
   const res = await db.select({ count: count() }).from(projectsTable)
   return res[0].count
 }
