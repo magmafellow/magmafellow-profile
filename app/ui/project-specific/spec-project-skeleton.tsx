@@ -31,8 +31,8 @@ export default async function SpecProjectSkeleton() {
           className={`${styles.specpr_features_title} ${styles.specpr_features_title_skeleton} shim-carcass shim-effect animate`}
         ></h3>
         <ul className={`${styles.specpr_features_ul}`}>
-          {[1, 2, 3].map((feature) => (
-            <li
+          {[1, 2, 3].map((feature, index) => (
+            <li key={index}
               className={`${styles.specpr_features_li} ${styles.specpr_features_li_skeleton}`}
             >
               <span
