@@ -26,7 +26,7 @@ export function Modal({
   return (
     <div
       id={id}
-      className="z-50 modal-wrapper fixed hidden items-center justify-center top-0 left-0 bg-opacity-50 bg-black h-screen w-screen"
+      className="z-50 modal-wrapper fixed hidden items-center justify-center top-0 left-0 bg-opacity-5 bg-white h-screen w-screen"
     >
       <div
         className={clsx(

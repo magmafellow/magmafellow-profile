@@ -42,6 +42,11 @@ export async function getAllTagsByProjectId(projectId: number, limit?: number) {
 export async function getTotalProjectsNumber(){
   unstable_noStore()
   
+  // const r = await new Promise((resolve, reject) => {  // aritifcial delay
+  //   // async code...
+  //   setTimeout(() => resolve(Infinity), 5500)
+  // })
+  
   const res = await db.select({ count: count() }).from(projectsTable)
   return res[0].count
 }

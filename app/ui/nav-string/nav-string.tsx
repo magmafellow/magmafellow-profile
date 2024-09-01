@@ -1,23 +1,18 @@
 import { FiHome } from 'react-icons/fi'
 import { FaRegStickyNote } from 'react-icons/fa'
 import { IoMdCodeWorking } from 'react-icons/io'
-import { FaRegAddressCard } from 'react-icons/fa'
 import { IoStatsChart } from 'react-icons/io5'
 import styles from './nav-string.module.scss'
 import Link from 'next/link'
 import { Modal, ModalHire } from '../modal'
 import { FaGithub, FaTelegramPlane } from 'react-icons/fa'
 import { IoMdMail } from 'react-icons/io'
-import { getTotalProjectsNumber } from '@/app/lib/actions/projects'
-import ProjectsNumber from './projects-number'
 import PersonalBtn from './personal-card-btn'
 import PersonalStatsBtn from './personal-stats-btn'
-import { getTotalBlogsNumber } from '@/app/lib/actions/blog'
+import { Suspense } from 'react'
+import { StatsWrapper, StatsWrapperSkeleton } from './stats-wrapper'
 
 export default async function NavString() {
-  const totalProjectsNumber = await getTotalProjectsNumber()
-  const totalBlogsNumber = await getTotalBlogsNumber()
-
   return (
     <>
       <div className="fixed flex items-stretch gap-2 z-10 top-5 md:top-9 left-[50%] -translate-x-[50%]">
@@ -58,7 +53,7 @@ export default async function NavString() {
         </div>
       </div>
       <Modal
-        className="w-[90%] pt-4 max-w-[500px] bg-neutral-800 border border-neutral-600 z-[100]"
+        className="w-[95%] pt-4 max-w-[500px] bg-[#0f0f0f] border border-neutral-600 z-[100]"
         id="personal-card"
       >
         <div className="flex justify-center mb-2 items-center">
@@ -72,18 +67,27 @@ export default async function NavString() {
           @magmafellow
         </h3>
         <div className="flex border-b pb-2 mb-1 border-neutral-600 items-center flex-col gap-4">
-          <a className="group text-xl inline-flex gap-1 items-center" href="https://t.me/polrekost">
+          <a
+            className="group text-xl inline-flex gap-1 items-center"
+            href="https://t.me/polrekost"
+          >
             <FaTelegramPlane className="group-hover:rotate-12 group-hover:text-sky-400 transition" />
             <span className="group-hover:text-neutral-100">@polrekost</span>
             <span>(telegram)</span>
           </a>
-          <a className="group text-xl inline-flex gap-2 items-center" href="mailto:magmafellow@gmail.com">
+          <a
+            className="group text-xl inline-flex gap-2 items-center"
+            href="mailto:magmafellow@gmail.com"
+          >
             <IoMdMail className="group-hover:rotate-12 group-hover:text-red-400 transition" />
             <span className="group-hover:text-neutral-100">
               magmafellow@gmail.com
             </span>
           </a>
-          <a className="group text-xl inline-flex gap-2 items-center" href="https://github.com/magmafellow">
+          <a
+            className="group text-xl inline-flex gap-2 items-center"
+            href="https://github.com/magmafellow"
+          >
             <FaGithub className="group-hover:rotate-12 group-hover:text-emerald-400 transition" />
             <span className="group-hover:text-neutral-100">
               github.com/magmafellow
@@ -91,7 +95,7 @@ export default async function NavString() {
           </a>
         </div>
         <div className="px-2 pb-2 border-b border-neutral-600">
-          <h4 className="text-xl font-bold">Bio</h4>
+          <h4 className="text-xl text-neutral-400 font-bold">Bio</h4>
           <p className="">
             In IRL they call me alex. age of 19. I reside in Moscow, Russia.
             Enjoy coding and software engineering
@@ -111,30 +115,15 @@ export default async function NavString() {
         </div>
       </Modal>
       <Modal
-        className="w-[90%] pt-4 max-w-[500px] bg-neutral-800 border border-neutral-600 z-[100]"
+        className="w-[90%] pt-4 max-w-[500px] bg-[#0f0f0f] border border-neutral-600 z-[100]"
         id="personal-stats"
       >
         <div className="flex justify-center items-center mb-7">
           <IoStatsChart className="text-4xl" />
         </div>
-        <div className="flex flex-col gap-3 text-2xl">
-          <div className="flex gap-2 pb-3 border-b border-neutral-600 items-center justify-center">
-            <span className="text-neutral-400 font-medium">
-              {totalProjectsNumber}
-            </span>
-            <span>Projects</span>
-          </div>
-          <div className="flex gap-2 pb-3 border-b border-neutral-600 items-center justify-center">
-            <span className="text-neutral-400 font-medium">
-              {totalBlogsNumber}
-            </span>
-            <span>Blogs</span>
-          </div>
-          <div className="flex gap-2 items-center justify-center">
-            <span className="text-neutral-400 font-medium">3</span>
-            <span>Time abroad</span>
-          </div>
-        </div>
+        <Suspense fallback={<StatsWrapperSkeleton />}>
+          <StatsWrapper />
+        </Suspense>
       </Modal>
     </>
   )
