@@ -45,6 +45,7 @@ export default function Slider({
   for (let i = 0; i < indicatorsCount; i++) {
     indicators.push(
       <div
+        key={i}
         className={`indicator ${index === i && 'active'}`}
         onClick={() => {
           setDirection('jump')
