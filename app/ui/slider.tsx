@@ -58,8 +58,8 @@ export default function Slider({
   return (
     <div className={`slider ${className}`}>
       <div className="slides">
-        {images.map((image) => (
-          <img className="rounded-md" src={image} alt="slider image" />
+        {images.map((image, index) => (
+          <img key={index} className="rounded-md" src={image} alt="slider image" />
         ))}
       </div>
       <button
