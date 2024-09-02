@@ -10,7 +10,7 @@ export default async function SpecProjectSkeleton() {
           className={`${styles.specpr_title} ${styles.specpr_title_skeleton} shim-carcass shim-effect animate`}
         ></h1>
         <span
-          className={`${styles.specpr_date} ${styles.specpr_title_skeleton} shim-carcass shim-effect animate`}
+          className={`${styles.specpr_date} ${styles.specpr_date_skeleton} shim-carcass shim-effect animate`}
         ></span>
       </div>
       <div

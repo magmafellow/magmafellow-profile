@@ -23,7 +23,7 @@
   &_box_title_date {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 1.3em;
   }
   &_date {
@@ -34,21 +34,19 @@
 
     &_skeleton {
       background-color: $dark_post_bg;
-      height: 1em;
-      width: 3em;
+      height: 1.3em;
+      width: 5.77em;
       border-radius: 4px;
     }
   }
   &_title {
-    padding-left: 29px;
+    margin-left: 12px;
     font-size: 32px;
     font-weight: 700;
     color: $dark_accent_02;
 
     &_skeleton {
       border-radius: 8px;
-      padding-left: 0px;
-      margin-left: 29px;
       height: 1em;
       width: 5em;
       background-color: $dark_post_bg;
@@ -82,18 +80,16 @@
   }
 
   &_description {
-    margin-bottom: 1.7em;
+    margin-bottom: 1.5em;
 
     &_title {
-      padding-left: 29px;
+      margin-left: 12px;
       margin-bottom: 1rem;
       font-size: 32px;
       font-weight: 600;
       color: $dark_h2_base;
 
       &_skeleton {
-        padding-left: 0px;
-        margin-left: 29px;
         height: 1em;
         width: 5em;
         background-color: $dark_post_bg;
@@ -102,13 +98,10 @@
     }
 
     &_text {
-      padding-left: 1em;
-      padding-right: 1em;
+      margin-left: 12px;
       letter-spacing: 0.05em;
 
       &_skeleton {
-        padding-left: 0px;
-        margin-left: 1em;
         height: 8em;
         border-radius: 12px;
         background-color: $dark_post_bg;
@@ -118,25 +111,24 @@
 
   &_features {
     margin-bottom: 24px;
-    
+
     &_title {
-      padding-left: 29px;
+      margin-left: 12px;
       margin-bottom: 0.77rem;
       font-size: 32px;
       font-weight: 600;
       color: $dark_h2_base;
 
       &_skeleton {
-        padding-left: 0px;
-        margin-left: 29px;
         width: 5em;
         height: 1em;
+        margin-bottom: 0.77em;
         border-radius: 8px;
         background-color: $dark_post_bg;
       }
     }
     &_ul {
-      padding-left: calc(29px + 1em);
+      padding-left: 1.5em;
     }
     &_li {
       position: relative;
@@ -187,7 +179,7 @@
   &_resume {
     margin-bottom: 1.7rem;
     &_text {
-      padding-left: 29px;
+      margin-left: 12px;
       font-size: 18px;
       color: $dark_h2_base;
 
@@ -195,8 +187,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 8px;
-        margin-left: 29px;
         height: 2em;
         background-color: $dark_post_bg;
         border-radius: 8px;
@@ -229,6 +219,35 @@
   }
 }
 
+@media (max-width: 911px) {
+  .specpr {
+    &_title {
+      margin-left: 0;
+    }
+    &_description {
+      &_title {
+        margin-left: 0;
+      }
+      &_text {
+        margin-left: 0;
+      }
+    }
+    &_features {
+      &_title {
+        margin-left: 0;
+      }
+      &_ul {
+        padding-left: 1em;
+      }
+    }
+    &_resume {
+      &_text {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
 @media (max-width: 644px) {
   .specpr {
     &_flc {
@@ -243,31 +262,13 @@
         height: 216px;
       }
     }
-    &_description {
-      &_title {
-        padding-left: 0.3rem;
-      }
-      &_text {
-        padding: 0;
-      }
-    }
+
     &_features {
-      &_title {
-        padding-left: 0.3rem;
-      }
-      &_ul {
-        padding-left: 0.3rem;
-      }
       &_li {
         font-size: 17px;
       }
     }
 
-    &_resume {
-      &_text {
-        padding-left: 0.7rem;
-      }
-    }
     &_goto {
       &_btn {
         width: 300px;
@@ -286,7 +287,7 @@
 @media (max-width: 492px) {
   .specpr {
     &_imageBox {
-      padding: 6px 8px;
+      padding: 0;
     }
   }
   .slider_my {
@@ -296,7 +297,7 @@
 @media (max-width: 438px) {
   .specpr {
     &_imageBox {
-      padding: 2px 4px;
+      padding: 0;
     }
 
     &_features {
@@ -304,15 +305,8 @@
         padding-left: 0.1rem;
       }
     }
-
-    &_resume {
-      &_text {
-        padding-left: 4px;
-      }
-    }
   }
   .slider_my {
-    
     height: 218px;
   }
 }
