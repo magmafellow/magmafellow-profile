@@ -6,7 +6,7 @@ export default function Slider({
   images,
   className,
 }: {
-  images: string[]
+  images: any
   className?: string
 }) {
   const [index, setIndex] = useState(0)
@@ -58,8 +58,8 @@ export default function Slider({
   return (
     <div className={`slider ${className}`}>
       <div className="slides">
-        {images.map((image, index) => (
-          <img key={index} className="rounded-md" src={image} alt="slider image" />
+        {images.map((image: any, index: number) => (
+          <img key={index} className="rounded-md" src={`/images/projects/${image}`} alt="slider image" />
         ))}
       </div>
       <button

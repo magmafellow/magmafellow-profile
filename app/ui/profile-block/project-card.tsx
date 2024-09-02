@@ -27,7 +27,7 @@ export default async function ProjectCard({
           width={360}
           height={236}
           alt={`${name} project`}
-          src={`/${pictures[0]}.png`}
+          src={`/images/projects/${pictures[0]}`}
         />
       </div>
       <div className={`${styles.projects_infoBox}`}>
@@ -42,7 +42,7 @@ export default async function ProjectCard({
             </div>
           </div>
           <div className={`${styles.projects_explore_and_timeBox}`}>
-            <Link href={`/`} className={`${styles.projects_exploreBtn}`}>
+            <Link href={`/projects/${id}`} className={`${styles.projects_exploreBtn}`}>
               Explore
             </Link>
             <div className={`${styles.projects_date}`}>2024-08-17</div>

@@ -13,46 +13,66 @@ export const projects: Array<InsertProject> = [
     id: 500,
     name: 'Direct Chat',
     description:
-      'A powerful chat app that provides unlimited strength of freedom by strong stack of security',
+      'A messanger. Which has minimalist design that you do not get bored of. Security and Speed were our objectives during develepment process. Direct Chat uses non-common approach to how you use messager - you do not have contacts, - you have only secure chats.',
     features: JSON.stringify([
-      ['Security', 'that powers you'],
-      ['Design', 'simplicity of which engages you'],
+      [
+        ['Security', 'that you will be content to use'],
+        [
+          'Minimalist:',
+          'This messanger has an elegant design supporting you focus on the main',
+        ],
+        ['Fast:', 'Extremely fast interactions with UI'],
+      ],
     ]),
     pictures: JSON.stringify([
-      'direct-chat_01',
-      'direct-chat_02',
-      'direct-chat_03',
+      'direct-chat-01.png',
+      'direct-chat-02.png',
+      'direct-chat-03.png',
+      'direct-chat-04.png',
+      'direct-chat-05.png',
     ]),
     resume:
-      'Whether you use this as chat with friend or tool to communicate with your group. You are doing this securely!',
+      'If you wanted to use something new in the world of messangers but still having security and speed - Choose Direct Chat',
   },
   {
     id: 501,
     name: 'Explore Nature',
-    description:
-      'An web static website. It has been done to master html and css skills',
-    features: JSON.stringify([
-      ['Advanced HTML markup', 'was used'],
-      ['Css BEM metodology', 'was used'],
-    ]),
-    pictures: JSON.stringify(['explore-nature_01', 'explore-nature_02']),
-    resume: 'A static website. Advanced css trciks, cute design',
+    description: 'Showcase for layout. Practising HTML, CSS, JS',
+    features: JSON.stringify([]),
+    pictures: JSON.stringify(['explore-nature-01.png']),
+    resume:
+      'Static website. In which I try new and already known techniques to gain layout skills',
   },
   {
     id: 502,
     name: 'Design Think',
-    description:
-      'An web static website. New methods of laying out blocks were learnt',
+    description: 'Showcase for layout. Practising HTML, CSS, JS',
     features: JSON.stringify([
-      ['Advanced HTML markup', 'was used'],
-      ['CSS tricks', 'were used there'],
+      ['Layouting:', 'Advanced HTML structure and css tricks'],
+    ]),
+    pictures: JSON.stringify(['design-think-01.png']),
+    resume:
+      'Static website. In which I try new and already known techniques to gain layout skills',
+  },
+  {
+    id: 503,
+    name: 'Tomato Focus',
+    description: 'A pomodoro-based app to improve productivity and focus. This uses the technique known as `Pomodoro`. Special design supports to keep you in focus. Only needed components included. Graceful sounds will let you know about changing phases.',
+    features: JSON.stringify([
+      ['Timing:', 'This app provides way to work with time'],
+      [
+        'Sounds:',
+        'While working with app You will get notified about current state',
+      ],
     ]),
     pictures: JSON.stringify([
-      'design-think_01',
-      'design-think_02',
-      'design-think_03',
+      'tomato-focus-01.png',
+      'tomato-focus-02.png',
+      'tomato-focus-03.png',
+      'tomato-focus-04.png',
     ]),
-    resume: 'A static website. Interesting css tricks',
+    resume:
+      'Tomato Focus - App that provides functionality based on Pomodoro-Technique that helps keep you in clear, active state',
   },
 ]
 

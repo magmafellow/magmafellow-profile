@@ -4,6 +4,7 @@ import { IoClose } from 'react-icons/io5'
 import '@/app/ui/css/modal.css'
 import { useEffect } from 'react'
 import clsx from 'clsx'
+import { GiConsoleController } from 'react-icons/gi'
 
 export function Modal({
   children,
@@ -21,6 +22,14 @@ export function Modal({
         ModalCloseImmediate(id)
       }
     })
+    const modal = document.querySelector(`#${id} .modal`)
+    modal?.addEventListener('click', function (e) {
+      const target = e.target as HTMLElement
+      if (!target.classList.contains('modal-closer'))
+        setTimeout(() => {
+          document.documentElement.classList.add('lock')
+        }, 10)
+    })
   })
 
   return (
@@ -36,7 +45,7 @@ export function Modal({
       >
         {children}
         <IoClose
-          className="hover:text-red-900 cursor-pointer absolute right-1.5 top-1.5 text-3xl"
+          className="modal-closer hover:text-red-900 cursor-pointer absolute right-1.5 top-1.5 text-3xl"
           onClick={() => ModalClose(id)}
         />
       </div>
@@ -66,6 +75,9 @@ export function ModalClose(id: string) {
   }, 240)
 
   document.documentElement.classList.remove('lock')
+  setTimeout(() => {
+    document.documentElement.classList.remove('lock')
+  }, 10)
 }
 
 export function ModalCloseImmediate(id: string) {
@@ -73,6 +85,7 @@ export function ModalCloseImmediate(id: string) {
   modal?.classList.remove('activated')
 
   modal?.classList.remove('active')
+
   document.documentElement.classList.remove('lock')
 }
 

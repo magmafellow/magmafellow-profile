@@ -6,6 +6,11 @@ import { unstable_noStore } from 'next/cache'
 import { db } from '@/db'
 import { projectsTable, projectsTagsTable, tagsTable } from '@/schema'
 
+export async function getProjectById(id: string) {
+  const res = await db.select().from(projectsTable).where(eq(projectsTable.id, Number(id)))
+  return res[0]
+}
+
 export async function getThreeLastProjectsPlaceholder() {
   unstable_noStore()
 

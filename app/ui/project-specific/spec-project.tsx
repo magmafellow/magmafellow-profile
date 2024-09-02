@@ -1,25 +1,30 @@
+import Link from 'next/link';
 import CommandText from '../command-text/command-text'
 import Slider from '../slider'
 import styles from './main.module.scss'
 import { HiOutlineStar } from "react-icons/hi";
+import { getProjectById } from '@/app/lib/actions/projects';
 
 export default async function SpecProject({ projectId }: { projectId: string }) {
 
-  const r = await new Promise((resolve, reject) => {  // artificial delay
-    setTimeout(() => resolve(Infinity), 3000)
-  })
+  // const r = await new Promise((resolve, reject) => {  // artificial delay
+  //   setTimeout(() => resolve(Infinity), 3000)
+  // })
   
-  const project = {
-    name: 'Direct Chat',
-    description: 'Description about direct chat',
-    features: [
-      ['Fast', 'enough to communicate over the world!'],
-      ['Secure', 'to not be worried about leaks'],
-      ['Minimalist', 'to fit your style'],
-    ],
-    resume: 'Direct Chat to message people safely and robust',
-    pictures: ['/direct-chat_01.png', '/direct-chat_01.png', '/direct-chat_01.png', '/direct-chat_01.png'],
-  }
+  // const project = {
+  //   name: 'Direct Chat',
+  //   description: 'Description about direct chat',
+  //   features: [
+  //     ['Fast', 'enough to communicate over the world!'],
+  //     ['Secure', 'to not be worried about leaks'],
+  //     ['Minimalist', 'to fit your style'],
+  //   ],
+  //   resume: 'Direct Chat to message people safely and robust',
+  //   pictures: ['/direct-chat_01.png', '/direct-chat_01.png', '/direct-chat_01.png', '/direct-chat_01.png'],
+  // }
+
+  const project = await getProjectById(projectId)
+  const features = project.features as any
   
   return (
     <div className={`${styles.specpr}`}>
@@ -33,18 +38,13 @@ export default async function SpecProject({ projectId }: { projectId: string }) 
       <div className={`${styles.specpr_description}`}>
         <h3 className={`${styles.specpr_description_title}`}>Description</h3>
         <p className={`${styles.specpr_description_text}`}>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum rem
-          reiciendis accusantium. Saepe doloremque ratione asperiores debitis
-          illo quia numquam, fuga eum aut rem error placeat magnam quod,
-          recusandae consequatur ex accusamus commodi praesentium beatae
-          voluptates provident totam aliquid reprehenderit qui. Recusandae esse
-          nisi placeat accusamus error provident reiciendis ducimus?
+          {project.description}
         </p>
       </div>
       <div className={`${styles.specpr_features}`}>
         <h3 className={`${styles.specpr_features_title}`}>Features</h3>
         <ul className={`${styles.specpr_features_ul}`}>
-          {project.features.map((feature, index) => (
+          {features.map((feature: any, index: number) => (
             <li key={index} className={`${styles.specpr_features_li}`}>
               <span className={`${styles.specpr_features_label}`}>{feature[0]}</span> <span className={`${styles.specpr_features_value}`}>{feature[1]}</span>
             </li>
@@ -53,11 +53,11 @@ export default async function SpecProject({ projectId }: { projectId: string }) 
       </div>
       <div className={`${styles.specpr_resume}`}>
         <p className={`${styles.specpr_resume_text}`}>
-          <HiOutlineStar className={`${styles.specpr_resume_icon}`} /> {project.resume}
+          <HiOutlineStar className={`${styles.specpr_resume_icon}`} />{project.resume}
         </p>
       </div>
       <div className={`${styles.specpr_goto}`}>
-        <a href='https://google.com' className={`${styles.specpr_goto_btn} shim-carcass shim-hover animate an_fast`}>GO TO</a>
+        <Link href='https://google.com' className={`${styles.specpr_goto_btn} shim-carcass shim-hover animate an_fast`}>GO TO</Link>
       </div>
     </div>
   )

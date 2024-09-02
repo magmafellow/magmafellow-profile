@@ -80,7 +80,9 @@
   }
 
   &_description {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $dark_border_blocks;
 
     &_title {
       margin-left: 12px;
@@ -99,8 +101,6 @@
 
     &_text {
       margin-left: 12px;
-      letter-spacing: 0.05em;
-
       &_skeleton {
         height: 8em;
         border-radius: 12px;
@@ -132,8 +132,8 @@
     }
     &_li {
       position: relative;
-      padding-left: 20px;
-      font-size: 20px;
+      padding-left: 16px;
+      font-size: 16px;
       &:not(:last-child) {
         margin-bottom: 0.3em;
       }
@@ -144,8 +144,8 @@
         border-radius: 8px;
         left: 4px;
         top: 12px;
-        width: 6px;
-        height: 6px;
+        width: 4px;
+        height: 4px;
         background: $dark_accent_02;
       }
     }
