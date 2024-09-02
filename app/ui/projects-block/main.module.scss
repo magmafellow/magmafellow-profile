@@ -171,7 +171,7 @@
   }
 }
 
-@media (max-width: 455px) {
+@media (max-width: 485px) {
   .projects {
     &_page_title {
       font-size: 28px;
@@ -193,6 +193,14 @@
   }
 }
 
+@media (max-width: 449px) {
+  .projects {
+    &_page_title {
+      font-size: 24px;
+    }
+  }
+}
+
 @media (max-width: 396px) {
   .projects {
     &_box_title_add {
@@ -200,7 +208,7 @@
       padding-left: 12px;
     }
     &_page_title {
-      font-size: 24px;
+      font-size: 22px;
     }
   }
 }

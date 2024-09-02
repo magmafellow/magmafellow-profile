@@ -17,7 +17,7 @@ export default function ProjectsBlock() {
           <FaCirclePlus className={`${styles.projects_addBtn}`} />
         </Link>
       </div>
-      <Suspense fallback={<ProjectsCardWrapperSkeleton number={10} />}>
+      <Suspense fallback={<ProjectsCardWrapperSkeleton limit={10} />}>
         <ProjectsCardWrapper />
       </Suspense>
     </div>

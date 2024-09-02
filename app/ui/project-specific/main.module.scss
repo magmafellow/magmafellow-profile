@@ -292,11 +292,14 @@
   }
 }
 @media (max-width: 438px) {
-  &_features {
-    &_ul {
-      padding-left: 0.1rem;
+  .specpr {
+    &_features {
+      &_ul {
+        padding-left: 0.1rem;
+      }
     }
   }
+
   .slider_my {
     height: 218px;
   }
