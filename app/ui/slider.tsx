@@ -45,6 +45,7 @@ export default function Slider({
   for (let i = 0; i < indicatorsCount; i++) {
     indicators.push(
       <div
+        key={i}
         className={`indicator ${index === i && 'active'}`}
         onClick={() => {
           setDirection('jump')
@@ -57,8 +58,8 @@ export default function Slider({
   return (
     <div className={`slider ${className}`}>
       <div className="slides">
-        {images.map((image) => (
-          <img className="rounded-md" src={image} alt="slider image" />
+        {images.map((image, index) => (
+          <img key={index} className="rounded-md" src={image} alt="slider image" />
         ))}
       </div>
       <button

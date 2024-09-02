@@ -44,8 +44,8 @@ export default async function SpecProject({ projectId }: { projectId: string }) 
       <div className={`${styles.specpr_features}`}>
         <h3 className={`${styles.specpr_features_title}`}>Features</h3>
         <ul className={`${styles.specpr_features_ul}`}>
-          {project.features.map((feature) => (
-            <li className={`${styles.specpr_features_li}`}>
+          {project.features.map((feature, index) => (
+            <li key={index} className={`${styles.specpr_features_li}`}>
               <span className={`${styles.specpr_features_label}`}>{feature[0]}</span> <span className={`${styles.specpr_features_value}`}>{feature[1]}</span>
             </li>
           ))}
