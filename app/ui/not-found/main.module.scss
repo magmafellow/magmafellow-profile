@@ -1,0 +1,53 @@
+// *** variables block ###
+@import '../../variables.module.scss';
+
+// *** utility block ###
+@import '../../utility.module.scss';
+
+.page {
+  grid-area: profile;
+  border-radius: 8px;
+  // border: 1px solid $dark_border_blocks;
+}
+
+.page {
+  padding-top: 72px;
+  
+  &_title {
+    color: $dark_h1_base;
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  &_desc {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  &_home {
+    text-align: center;
+    
+    &_btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 1rem 2rem;
+      background-color: $dark_post_bg;
+      border-radius: 0.5rem;
+      color: $dark_h1_base;
+      transition: 0.2s;
+      
+      &:hover {
+        background-color: $dark_blogItemBiteSkeleton_bg;
+
+        svg {
+          transform: translateX(-0.7rem);
+          
+        }
+      }
+      svg {
+        transition: 0.2s;
+      }
+    }
+  }
+}

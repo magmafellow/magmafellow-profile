@@ -4,6 +4,7 @@ import Slider from '../slider'
 import styles from './main.module.scss'
 import { HiOutlineStar } from "react-icons/hi";
 import { getProjectById } from '@/app/lib/actions/projects';
+import { notFound } from 'next/navigation';
 
 export default async function SpecProject({ projectId }: { projectId: string }) {
 
@@ -24,6 +25,10 @@ export default async function SpecProject({ projectId }: { projectId: string }) 
   // }
 
   const project = await getProjectById(projectId)
+  if(!project) {
+    return notFound()
+  }
+  
   const features = project.features as any
   
   return (

@@ -5,8 +5,12 @@ import projectsDataPlaceholder from '@/app/ui/profile-block/projects-data-placeh
 import { unstable_noStore } from 'next/cache'
 import { db } from '@/db'
 import { projectsTable, projectsTagsTable, tagsTable } from '@/schema'
+import { isNumeric } from '../utils'
 
 export async function getProjectById(id: string) {
+  if(!isNumeric(id)) {
+    return false
+  }
   const res = await db.select().from(projectsTable).where(eq(projectsTable.id, Number(id)))
   return res[0]
 }
