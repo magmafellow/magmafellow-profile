@@ -40,9 +40,9 @@ export default async function BlogItem({
           {tags?.map((tagObj, index) => <div key={index} className={`${styles.blog_item_box_tags_tag}`}>{tagObj}</div> )}
         </div>
         <div className={`${styles.blog_item_box_btn}`}>
-          <button className={`${styles.blog_item_box_btn_btn}`}>
+          <Link href='/blog/1' className={`${styles.blog_item_box_btn_btn}`}>
             Check out
-          </button>
+          </Link>
         </div>
       </div>
     </div>

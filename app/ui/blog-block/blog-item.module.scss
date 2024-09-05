@@ -115,6 +115,7 @@
 
   &_box_btn {
     &_btn {
+      display: inline-block;
       background-color: $dark_project_tag_bg;
       padding: 12px 16px;
       transition: 0.17s;

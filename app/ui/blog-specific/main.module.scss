@@ -1,0 +1,86 @@
+// *** variables block ###
+@import '../../variables.module.scss';
+
+// *** utility block ###
+@import '../../utility.module.scss';
+
+.page {
+  padding-bottom: 50px;
+  padding-top: 54px;
+  grid-area: profile;
+  border-radius: 8px;
+}
+
+.blog {
+  &_title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $dark_h1_base;
+    margin-left: 12px;
+    margin-bottom: 0.7rem;
+  }
+  &_bite {
+    margin-left: 12px;
+    margin-bottom: 1rem;
+  }
+  &_tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 12px;
+    margin-bottom: 1rem;
+
+    &_tag {
+      background-color: $dark_specblog_tagBg;
+      padding: 6px 8px;
+      color: $dark_specblog_tagText;
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 12px;
+      transition: 0.2s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $dark_specblog_tagBgHover;
+      }
+    }
+  }
+
+  &_hr {
+    height: 1px;
+    background-color: $dark_blogItemBiteSkeleton_bg;
+    margin-bottom: 1rem;
+  }
+}
+
+.content {
+  margin: 0 12px;
+}
+
+@media (max-width: 700px) {
+  .blog {
+    &_title {
+      font-size: 28px;
+    }
+  }
+}
+@media (max-width: 468px) {
+  .blog {
+    &_title {
+      margin-left: 4px;
+    }
+    &_bite {
+      margin-left: 4px;
+    }
+    &_tags {
+      margin-left: 4px;
+      
+      &_tag {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .content {
+    margin: 0 4px;
+  }
+}

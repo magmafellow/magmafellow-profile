@@ -21,3 +21,9 @@
     flex-flow: row nowrap;
   }
 }
+
+@media (max-width: 600px) {
+  .command {
+    padding-left: 12px;
+  }
+}

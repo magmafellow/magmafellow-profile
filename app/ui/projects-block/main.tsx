@@ -12,7 +12,7 @@ export default function ProjectsBlock() {
     <div className={`${styles.projects}`}>
       <CommandText id="get-blog" path="#/home/magmafellow" command="get-projects" />
       <div className={`${styles.projects_box_title_add}`}>
-        <h1 className={`${styles.projects_page_title}`}>Magmafellow&apos;s projects</h1>
+        <h1 className={`${styles.projects_page_title}`}>Projects</h1>
         <Link href="/projects/add">
           <FaCirclePlus className={`${styles.projects_addBtn}`} />
         </Link>

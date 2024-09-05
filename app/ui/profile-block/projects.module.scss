@@ -19,7 +19,7 @@
     margin-right: 16px;
     border-radius: 6px;
     border: 1px solid $dark_project_item_border;
-    transition: 0.17s;
+    transition: 0.2s;
     margin-bottom: 10px;
 
     &:hover {
@@ -33,9 +33,6 @@
           border: none;
         }
         
-        &:hover {
-          text-decoration: underline;
-        }
       }
       .projects_title {
         color: $dark_accent_02;

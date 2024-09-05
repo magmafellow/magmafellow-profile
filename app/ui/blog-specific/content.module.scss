@@ -1,0 +1,9 @@
+// *** variables block ###
+@import '../../variables.module.scss';
+
+
+.skeleton {
+  height: 400px;
+  background-color: $dark_blogItemBiteSkeleton_bg;
+  border-radius: 0.7rem;
+}
