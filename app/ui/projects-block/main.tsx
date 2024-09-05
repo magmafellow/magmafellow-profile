@@ -18,7 +18,7 @@ export default function ProjectsBlock() {
         </Link>
       </div>
       <Suspense fallback={<ProjectsCardWrapperSkeleton limit={10} />}>
-        <ProjectsCardWrapper />
+        <ProjectsCardWrapper limit={99} />
       </Suspense>
     </div>
   )

@@ -3,8 +3,8 @@ import { Suspense } from 'react'
 import ProjectCardSkeleton from './project-card-skeleton'
 import ProjectCard from './project-card'
 
-export default async function ProjectsCardWrapper() {
-  const projects = await getLastProjects(3)
+export default async function ProjectsCardWrapper({ limit }: { limit: number }) {
+  const projects = await getLastProjects(limit)
 
   return projects.map((projectObj, index) => <ProjectCard key={index} {...projectObj} />)
 }

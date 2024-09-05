@@ -15,7 +15,7 @@ export default async function Projects() {
       <Suspense
         fallback={<ProjectsCardWrapperSkeleton limit={3}></ProjectsCardWrapperSkeleton>}
       >
-        <ProjectsCardWrapper />
+        <ProjectsCardWrapper limit={3} />
       </Suspense>
     </div>
   )

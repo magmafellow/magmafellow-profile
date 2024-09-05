@@ -1,5 +1,6 @@
 'use client'
 import '@/app/ui/css/slider.css'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export default function Slider({
@@ -59,22 +60,33 @@ export default function Slider({
     <div className={`slider ${className}`}>
       <div className="slides">
         {images.map((image: any, index: number) => (
-          <img key={index} className="rounded-md" src={`/images/projects/${image}`} alt="slider image" />
+          <Image
+            width={1920}
+            height={1080}
+            key={index}
+            className="rounded-md"
+            src={`/images/projects/${image}`}
+            alt="slider image"
+          />
         ))}
       </div>
-      <button
-        className="prev   bg-neutral-600 hover:bg-neutral-500 hover:text-white focus:outline outline-neutral-300 transition py-2 px-4 rounded-xl"
-        onClick={backSlide}
-      >
-        &#10094;
-      </button>
-      <button
-        className="next   bg-neutral-600 hover:bg-neutral-500 hover:text-white focus:outline outline-neutral-300 transition py-2 px-4 rounded-xl"
-        onClick={nextSlide}
-      >
-        &#10095;
-      </button>
-      <div className="indicator-box">{indicators}</div>
+      {images.length > 1 ? (
+        <div>
+          <button
+            className="prev   bg-neutral-600 hover:bg-neutral-500 hover:text-white focus:outline outline-neutral-300 transition py-2 px-4 rounded-xl"
+            onClick={backSlide}
+          >
+            &#10094;
+          </button>
+          <button
+            className="next   bg-neutral-600 hover:bg-neutral-500 hover:text-white focus:outline outline-neutral-300 transition py-2 px-4 rounded-xl"
+            onClick={nextSlide}
+          >
+            &#10095;
+          </button>
+          <div className="indicator-box">{indicators}</div>
+        </div>
+      ) : null}
     </div>
   )
 }
