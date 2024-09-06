@@ -27,6 +27,10 @@
     font-weight: 900;
     font-size: 32px;
     color: $dark_accent_01;
+
+    html[style="color-scheme: light;"] & {
+      color: $light_accent_01;
+    }
   }
   &_addBtn {
     font-size: 2rem;
@@ -36,6 +40,10 @@
 
     &:hover {
       color: $dark_accent_02;
+
+      html[class*='light'] & {
+        color: $light_accent_02;
+      }
     }
   }
 }

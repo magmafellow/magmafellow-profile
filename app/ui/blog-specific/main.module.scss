@@ -18,6 +18,10 @@
     color: $dark_h1_base;
     margin-left: 12px;
     margin-bottom: 0.7rem;
+
+    html[class*='light'] & {
+      color: $light_h1_base;
+    }
   }
   &_bite {
     margin-left: 12px;
@@ -39,8 +43,17 @@
       transition: 0.2s;
       cursor: pointer;
 
+      html[class*='light'] & {
+        color: $light_specblog_tagText;
+        background-color: $light_specblog_tagBg;
+      }
+
       &:hover {
         background-color: $dark_specblog_tagBgHover;
+
+        html[class*='light'] & {
+          background-color: $light_specblog_tagBgHover;
+        }
       }
     }
   }
@@ -54,6 +67,11 @@
 
 .content {
   margin: 0 12px;
+  color: $dark_text_base;
+
+  html[class*='light'] & {
+    color: $light_text_base;
+  }
 }
 
 @media (max-width: 700px) {
@@ -73,7 +91,7 @@
     }
     &_tags {
       margin-left: 4px;
-      
+
       &_tag {
         font-size: 12px;
       }

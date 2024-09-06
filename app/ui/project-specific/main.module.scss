@@ -41,6 +41,10 @@
     font-weight: 700;
     color: $dark_accent_02;
 
+    html[class*='light'] & {
+      color: $light_accent_02;
+    }
+
     &_skeleton {
       border-radius: 8px;
       height: 1em;
@@ -60,6 +64,10 @@
     margin-bottom: 1.5em;
     overflow: hidden;
     margin-bottom: 2em;
+
+    html[class*='light'] & {
+      background-color: #bcbcbc;
+    }
 
     img {
       width: 100%;
@@ -86,6 +94,10 @@
       font-size: 32px;
       font-weight: 600;
       color: $dark_h2_base;
+
+      html[class*='light'] & {
+        color: $light_h2_base;
+      }
 
       &_skeleton {
         height: 1em;
@@ -115,6 +127,10 @@
       font-weight: 600;
       color: $dark_h2_base;
 
+      html[class*='light'] & {
+        color: $light_h2_base;
+      }
+      
       &_skeleton {
         width: 5em;
         height: 1em;
@@ -149,6 +165,10 @@
       color: $dark_accent_02;
       font-weight: 600;
 
+      html[class*='light'] & {
+        color: $light_accent_02;
+      }
+
       &_skeleton {
         border-radius: 6px;
         margin-right: 1em;
@@ -176,6 +196,10 @@
       font-size: 18px;
       color: $dark_h2_base;
 
+      html[class*='light'] & {
+        color: $light_h2_base;
+      }
+
       &_skeleton {
         display: flex;
         justify-content: center;
@@ -191,6 +215,10 @@
       font-size: 32px;
       margin-bottom: 0.3rem;
       color: $dark_accent_01;
+
+      html[class*='light'] & {
+        color: $light_accent_01;
+      }
     }
   }
   &_goto {

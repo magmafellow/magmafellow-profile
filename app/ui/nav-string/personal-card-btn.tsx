@@ -7,7 +7,7 @@ import styles from './nav-string.module.scss'
 export default function PersonalBtn({ id }: { id: string }) {
   return (
     <div
-      className={`${styles.first_btn} hover:bg-zinc-700 cursor-pointer text-zinc-300 flex gap-2 items-center h-full px-4`}
+      className={`${styles.first_btn} hover:bg-zinc-300 dark:hover:bg-zinc-700 cursor-pointer text-zinc-700 dark:text-zinc-300 flex gap-2 items-center h-full px-4`}
       onClick={() => ModalHire(id)}
     >
       <FaRegAddressCard />

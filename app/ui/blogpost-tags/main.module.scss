@@ -12,6 +12,10 @@
   max-height: 230px;
   border-radius: 8px;
   border: 1px solid $dark_border_blocks;
+
+  html[style="color-scheme: light;"] & {
+    background-color: $light_base_bg;
+  }
 }
 
 // blogpost tags
@@ -21,6 +25,11 @@
     padding-left: 16px;
     font-size: 20px;
     margin-bottom: 10px;
+    color: $dark_h2_base;
+
+    html[class*="light"] & {
+      color: $light_h2_base;
+    }
   }
   &_box {
     padding: 0 16px;
@@ -34,6 +43,10 @@
     &_value {
       font-weight: 600;
       color: $dark_h2_base;
+
+      html[class*="light"] & {
+        color: $light_h2_base;
+      }
     }
   }
   &_item {
@@ -44,6 +57,10 @@
     gap: 3px;
     align-items: center;
     border-radius: 4px;
+
+    html[class='light'] & {
+      background-color: $light_project_tag_bg;
+    }
   }
 
   padding-bottom: 16px;

@@ -6,10 +6,15 @@
 
 .stats {
   grid-area: stats;
-  background-color: $dark_bg_second;
+  background-color: $dark_base_bg;
   height: 380px;
   border-radius: 8px;
   border: 1px solid $dark_border_blocks;
+
+  html[style="color-scheme: light;"] & {
+    background-color: $light_base_bg;
+
+  }
 }
 
 // stats box

@@ -11,6 +11,7 @@ import PersonalBtn from './personal-card-btn'
 import PersonalStatsBtn from './personal-stats-btn'
 import { Suspense } from 'react'
 import { StatsWrapper, StatsWrapperSkeleton } from './stats-wrapper'
+import ThemeToggle from '../toggle-theme-mode'
 
 export default async function NavString() {
   return (
@@ -26,24 +27,24 @@ export default async function NavString() {
         >
           <Link
             href="/"
-            className={`${styles.middle_item} hover:bg-zinc-700 cursor-pointer text-zinc-300 flex gap-2 items-center h-full pl-4 pr-2 py-2 sm:pr-3 sm:pl-5 sm:py-1.5 md:pl-3 md:pr-2 md:py-1`}
+            className={`${styles.middle_item} hover:bg-zinc-300 dark:hover:bg-zinc-700 cursor-pointer text-zinc-300 flex gap-2 items-center h-full pl-4 pr-2 py-2 sm:pr-3 sm:pl-5 sm:py-1.5 md:pl-3 md:pr-2 md:py-1`}
           >
-            <FiHome />
-            <span className="font-semibold">home</span>
+            <FiHome className='text-zinc-700 dark:text-zinc-300' />
+            <span className="font-semibold text-zinc-700 dark:text-zinc-300">home</span>
           </Link>
           <Link
             href="/blog"
-            className={`${styles.middle_item} hover:bg-zinc-700 cursor-pointer text-zinc-300 flex gap-2 items-center h-full px-2 py-2 sm:px-3 sm:py-1.5 md:px-2 md:py-1`}
+            className={`${styles.middle_item} hover:bg-zinc-300 dark:hover:bg-zinc-700 cursor-pointer text-zinc-300 flex gap-2 items-center h-full px-2 py-2 sm:px-3 sm:py-1.5 md:px-2 md:py-1`}
           >
-            <FaRegStickyNote />
-            <span className="font-semibold">blog</span>
+            <FaRegStickyNote className='text-zinc-700 dark:text-zinc-300' />
+            <span className="font-semibold text-zinc-700 dark:text-zinc-300">blog</span>
           </Link>
           <Link
             href="/projects"
-            className={`${styles.middle_item} hover:bg-zinc-700 cursor-pointer text-zinc-300 flex gap-2 items-center h-full pr-4 pl-2 py-2 sm:pl-3 sm:pr-5 sm:py-1.5 md:pr-3 md:pl-2 md:py-1`}
+            className={`${styles.middle_item} hover:bg-zinc-300 dark:hover:bg-zinc-700 cursor-pointer text-zinc-300 flex gap-2 items-center h-full pr-4 pl-2 py-2 sm:pl-3 sm:pr-5 sm:py-1.5 md:pr-3 md:pl-2 md:py-1`}
           >
-            <IoMdCodeWorking />
-            <span className="font-semibold">Projects</span>
+            <IoMdCodeWorking className='text-zinc-700 dark:text-zinc-300' />
+            <span className="font-semibold text-zinc-700 dark:text-zinc-300">Projects</span>
           </Link>
         </div>
         <div
@@ -53,17 +54,17 @@ export default async function NavString() {
         </div>
       </div>
       <Modal
-        className="w-[95%] pt-4 max-w-[500px] bg-[#0f0f0f] border border-neutral-600 z-[100]"
+        className="w-[95%] pt-4 max-w-[500px] bg-[#e7e7e7] border-neutral-400 dark:bg-[#0f0f0f] border dark:border-neutral-600 z-[100]"
         id="personal-card"
       >
         <div className="flex justify-center mb-2 items-center">
           <img
-            className="w-20 h-20 rounded-full"
+            className="w-28 h-28 rounded-full"
             src="/carrot.jpg"
             alt="profile image"
           />
         </div>
-        <h3 className="text-2xl text-neutral-300 mb-4 text-center font-bold">
+        <h3 className="text-2xl text-stone-600 dark:text-neutral-300 mb-4 text-center font-bold">
           @magmafellow
         </h3>
         <div className="flex border-b pb-2 mb-1 border-neutral-600 items-center flex-col gap-4">
@@ -113,9 +114,10 @@ export default async function NavString() {
             <span className="text-neutral-400 font-bold">fluent</span>
           </div>
         </div>
+        <ThemeToggle className='absolute top-3 left-3 text-4xl dark:hover:text-[#48cfad] hover:text-[#20a382] transition' />
       </Modal>
       <Modal
-        className="w-[90%] pt-4 max-w-[500px] bg-[#0f0f0f] border border-neutral-600 z-[100]"
+        className="w-[90%] pt-4 max-w-[500px] bg-[#e7e7e7] border-neutral-400 dark:bg-[#0f0f0f] border dark:border-neutral-600 z-[100]"
         id="personal-stats"
       >
         <div className="flex justify-center items-center mb-7">

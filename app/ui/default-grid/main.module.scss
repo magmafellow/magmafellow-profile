@@ -47,6 +47,13 @@
   font-smooth: always;
 
   color: $dark_text_base;
+
+  html[style="color-scheme: light;"] & {
+    background-color: $light_base_bg;
+    color: $light_text_base;
+  }
+
+  transition: 0.2s;
 }
 
 .grid {

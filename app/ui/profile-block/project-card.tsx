@@ -2,6 +2,7 @@ import Image from 'next/image'
 import styles from './projects.module.scss'
 import Link from 'next/link'
 import { getAllTagsByProjectId } from '@/app/lib/actions/projects'
+import { truncatePhrase } from '@/app/lib/utils'
 
 export default async function ProjectCard({
   id,
@@ -32,7 +33,7 @@ export default async function ProjectCard({
       </div>
       <div className={`${styles.projects_infoBox}`}>
         <h3 className={`${styles.projects_title}`}>{name}</h3>
-        <p className={`${styles.projects_description}`}>{description}</p>
+        <p className={`${styles.projects_description}`}>{truncatePhrase(description, 96)}</p>
         <div className={`${styles.projects_tags_and_exploreBox}`}>
           <div className={`${styles.projects_tags}`}>
             <div className={`${styles.projects_tags_inner}`}>

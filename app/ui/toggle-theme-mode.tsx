@@ -5,7 +5,7 @@ import { useTheme } from 'next-themes'
 import { IoMoonSharp } from 'react-icons/io5'
 import { GiUbisoftSun } from 'react-icons/gi'
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ className }: { className: string }) => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
 
@@ -18,11 +18,11 @@ const ThemeToggle = () => {
   }
 
   return (
-    <button type="button">
+    <button className={className} type="button">
       {theme === 'light' ? (
-        <IoMoonSharp className="text-2xl" onClick={() => setTheme('dark')} />
+        <IoMoonSharp className="" onClick={() => setTheme('dark')} />
       ) : (
-        <GiUbisoftSun className="text-3xl" onClick={() => setTheme('light')} />
+        <GiUbisoftSun className="" onClick={() => setTheme('light')} />
       )}
     </button>
   )

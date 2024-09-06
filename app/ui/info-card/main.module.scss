@@ -8,13 +8,18 @@
 .info_card {
   grid-area: info_card;
   background-color: $dark_bg_second;
-  height: 360px;
+  height: 390px;
   border-radius: 8px;
   border: 1px solid $dark_border_blocks;
+
+  html[style="color-scheme: light;"] & {
+    background-color: $light_base_bg;
+  }
 }
 
 // info card
 .info_card {
+  position: relative;
   padding: 16px 12px;
 }
 .info_card__img_box {
@@ -28,9 +33,29 @@
   }
   & span {
     flex: 1 0 auto;
-    margin-left: 16px;
+    text-align: center;
     color: $dark_h1_base;
     font-weight: 600;
+
+    html[style="color-scheme: light;"] & {
+      color: $light_h1_base;
+    }
+  }
+}
+
+.themeToggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: $dark_text_second;
+  transition: 0.2s;
+  font-size: 1.5rem;
+  
+  &:hover {
+    color: $dark_accent_02;
+  }
+  html[style="color-scheme: light;"] & {
+    color: $light_accent_02;
   }
 }
 
@@ -40,7 +65,7 @@
 @media (max-width: 1006px) {
   .info_card {
     height: auto;
-    max-height: 380px;
+    max-height: 420px;
   }
 }
 

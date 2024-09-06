@@ -1,10 +1,8 @@
 // *** variables block ###
 @import '../../variables.module.scss';
 
-
 // *** utility block ###
 @import '../../utility.module.scss';
-
 
 // latest blogs
 .latest_blogs {
@@ -14,6 +12,10 @@
     margin-bottom: 2px;
     padding-left: 16px;
     color: $dark_h2_base;
+
+    html[class='light'] & {
+      color: $light_h2_base;
+    }
   }
 
   &_box {
@@ -27,6 +29,14 @@
         transition: 0.1s;
         background-color: $dark_post_bg;
         cursor: pointer;
+
+        html[class='light'] & {
+          background-color: $light_post_bg;
+        }
+      }
+
+      html[class='light'] & {
+        border-bottom: 1px solid $light_post_border;
       }
 
       &:last-child {

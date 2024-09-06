@@ -24,7 +24,11 @@
       font-size: 32px;
       font-weight: 900;
       letter-spacing: 0.023em;
-      color: $dark_text_bright;
+      color: $dark_accent_01;
+
+      html[style="color-scheme: light;"] & {
+        color: $light_accent_01;
+      }
     }
     &_little {
       font-size: 12px;
@@ -42,6 +46,10 @@
     letter-spacing: 0.023em;
     margin-bottom: 20px;
     color: $dark_text_bright;
+
+    html[style="color-scheme: light;"] & {
+      color: $light_accent_01;
+    }
   }
 
   &_info {
@@ -52,10 +60,18 @@
   &_em1 {
     color: $dark_h1_base;
     color: $dark_accent_02;
+
+    html[style="color-scheme: light;"] & {
+      color: $light_accent_02;
+    }
   }
   &_em2 {
     color: $dark_accent_01;
     font-weight: 600;
+
+    html[style="color-scheme: light;"] & {
+      color: $light_accent_01;
+    }
   }
 }
 
