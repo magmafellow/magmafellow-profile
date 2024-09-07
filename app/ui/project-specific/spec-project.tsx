@@ -32,7 +32,8 @@ export default async function SpecProject({
     return notFound()
   }
 
-  const features = project.features as any
+  const features = JSON.parse(project.features)
+  const pictures = JSON.parse(project.pictures)
 
   return (
     <div className={`${styles.specpr}`}>
@@ -44,7 +45,7 @@ export default async function SpecProject({
         </span>
       </div>
       <div className={`${styles.specpr_imageBox}`}>
-        <Slider className={styles.slider_my} images={project.pictures} />
+        <Slider className={styles.slider_my} images={pictures} />
       </div>
       <div className={`${styles.specpr_description}`}>
         <h3 className={`${styles.specpr_description_title}`}>Description</h3>

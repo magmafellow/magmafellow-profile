@@ -15,14 +15,12 @@ export const projects: Array<InsertProject> = [
     description:
       'A messanger. Which has minimalist design that you do not get bored of. Security and Speed were our objectives during develepment process. Direct Chat uses non-common approach to how you use messager - you do not have contacts, - you have only secure chats.',
     features: JSON.stringify([
+      ['Security', 'that you will be content to use'],
       [
-        ['Security', 'that you will be content to use'],
-        [
-          'Minimalist:',
-          'This messanger has an elegant design supporting you focus on the main',
-        ],
-        ['Fast:', 'Extremely fast interactions with UI'],
+        'Minimalist:',
+        'This messanger has an elegant design supporting you focus on the main',
       ],
+      ['Fast:', 'Extremely fast interactions with UI'],
     ]),
     pictures: JSON.stringify([
       'direct-chat-01.png',
@@ -57,7 +55,8 @@ export const projects: Array<InsertProject> = [
   {
     id: 503,
     name: 'Tomato Focus',
-    description: 'A pomodoro-based app to improve productivity and focus. This uses the technique known as `Pomodoro`. Special design supports to keep you in focus. Only needed components included. Graceful sounds will let you know about changing phases.',
+    description:
+      'A pomodoro-based app to improve productivity and focus. This uses the technique known as `Pomodoro`. Special design supports to keep you in focus. Only needed components included. Graceful sounds will let you know about changing phases.',
     features: JSON.stringify([
       ['Timing:', 'This app provides way to work with time'],
       [

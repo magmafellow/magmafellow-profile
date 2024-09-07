@@ -15,11 +15,13 @@ export default async function ProjectCard({
   id: number
   name: string
   description: string
-  features: any
-  pictures: any
+  features: string
+  pictures: string
   resume: string
 }) {
   const tags = await getAllTagsByProjectId(id, 7)
+  features = JSON.parse(features)
+  pictures = JSON.parse(pictures)
   
   return (
     <div className={`${styles.projects_item}`}>
