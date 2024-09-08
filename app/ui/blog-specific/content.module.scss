@@ -2,8 +2,27 @@
 @import '../../variables.module.scss';
 
 
-.skeleton {
-  height: 400px;
+.skeleton_title {
+  height: 24px;
+  width: 172px;
   background-color: $dark_blogItemBiteSkeleton_bg;
-  border-radius: 0.7rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.skeleton_title_wide {
+  width: 248px;
+}
+.skeleton_title_medium {
+  width: 208px;
+}
+
+.skeleton_text {
+  height: 86px;
+  background-color: $dark_blogItemBiteSkeleton_bg;
+  border-radius: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.skeleton_text_high {
+  height: 156px;
 }

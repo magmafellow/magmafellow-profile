@@ -76,12 +76,113 @@ html[style="color-scheme: light;"] .shim-carcass::before {
 
 /* blog styles */
 .blog {}
-.blog .title {
+.blog h2 {
   font-size: 24px;
+  margin-bottom: 0.3rem;
   color: #e0e0e0;
+  font-weight: 700;
 }
-html[class*="light"] .blog .title {
-  color: #6c6c6c;
+html[class*="light"] .blog h2 {
+  color: #434343;
+}
+
+.blog h3 {
+  font-size: 20px;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  color: #c8c8c8;
+}
+html[class*="light"] .blog h3 {
+  color: #535353;
+}
+
+.blog p {
+  margin-bottom: 1em;
+}
+html[class*="light"] .blog p {
+  color: #737373;
+}
+
+.blog .command {
+  background-color: #6e7274;
+  color: #cfdce0;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+
+.blog .link {
+  font-weight: 500;
+  color: rgb(106, 210, 251);
+  text-decoration: underline;
+}
+html[class*="light"] .blog .link {
+  color: rgb(50, 102, 121);
+}
+
+.blog .instructions {
+  margin-left: 2rem;
+  list-style-type: decimal;
+}
+.blog .instructions li {
+  margin-bottom: 0.8rem;
+  color: #cfdce0;
+}
+html[class*="light"] .blog .instructions li {
+  color: #3a3e3f;
+}
+
+.blog .highlight {
+  color:#e0e0e0;
+}
+html[class*="light"] .blog .highlight {
+  color: #2a2a2a;
+}
+
+.blog .warning {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: #856c08;
+  color: #f9d442;
+  border: 1px solid #ecc62e;
+  margin-bottom: 1rem;
+}
+html[class*="light"] .blog .warning {
+  background-color: #d8b528;
+  color: #695814;
+  border: 1px solid #6a570c;
+}
+
+.blog .danger {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: #850808;
+  color: #f94242;
+  border: 1px solid #ec2e2e;
+  margin-bottom: 1rem;
+}
+html[class*="light"] .blog .danger {
+  background-color: #d82828;
+  color: #691414;
+  border: 1px solid #6a0c0c;
+}
+
+.blog .well {
+  padding: 4px 8px;
+  border-radius: 8px;
+  background-color: #128508;
+  color: #67f942;
+  border: 1px solid #5aec2e;
+  margin-bottom: 1rem;
+}
+html[class*="light"] .blog .well {
+  background-color: #5dd828;
+  color: #256914;
+  border: 1px solid #156a0c;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 /* end blog styles */
