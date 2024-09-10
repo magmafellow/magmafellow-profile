@@ -146,6 +146,18 @@ html[class*="light"] .blog .highlight {
   color: #f9d442;
   border: 1px solid #ecc62e;
   margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.blog .warning::before {
+  content: '❗';
+  display: block;
+  position: absolute;
+  font-size: 1.35rem;
+  font-weight: 700;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0.5rem;
 }
 html[class*="light"] .blog .warning {
   background-color: #d8b528;

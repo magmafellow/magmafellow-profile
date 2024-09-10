@@ -4,6 +4,7 @@ import CommandText from '../command-text/command-text'
 import Image from 'next/image'
 import Link from 'next/link'
 import Projects from './projects'
+import Skills from '../skills/main'
 
 export default async function ProfileBlock() {
   return (
@@ -36,8 +37,9 @@ export default async function ProfileBlock() {
           Explore my ideas. I have worked on 18+ ones.
         </p>
       </div>
-      
       <Projects />
+      <CommandText id='skills' path="#/home/magmafellow" command="wahtareskills" />
+      <Skills />
     </div>
   )
 }
