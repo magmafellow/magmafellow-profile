@@ -24,8 +24,43 @@
       rgb(28, 28, 28) 67%,
       rgba(14, 14, 14, 1) 100%
     );
+    html[class*="light"] & {
+      background: linear-gradient(
+      45deg,
+      rgb(227, 227, 227) 0%,
+      rgb(206, 206, 206) 67%,
+      rgb(227, 227, 227) 100%
+    );
+    }
     border-radius: 12px;
     margin-bottom: 1.5rem;
+    transition: 0.2s;
+
+    &:hover {
+      background: linear-gradient(
+      45deg,
+      rgb(19, 19, 19) 0%,
+      rgb(36, 36, 36) 67%,
+      rgb(19, 19, 19) 100%
+    );
+    html[class*="light"] & {
+      background: linear-gradient(
+      45deg,
+      rgb(216, 216, 216) 0%,
+      rgb(183, 183, 183) 67%,
+      rgb(209, 209, 209) 100%
+    );
+    }
+      
+      svg {
+        transform: scale(1.1);
+        color: $dark_h1_base;
+
+        html[class*="light"] & {
+          color: $light_h1_base;
+        }
+      }
+    }
   }
   &_leftBox {
     flex: 0 0 70px;
@@ -41,10 +76,33 @@
       font-size: 32px;
       font-weight: 700;
       color: $dark_h1_base;
+
+      html[class*="light"] & {
+        color: $light_h1_base;
+      }
     }
     &_text {
       font-size: 18px;
       // color: $dark_h2_base;
+    }
+  }
+}
+
+
+@media (max-width: 658px) {
+  .skills {
+    &_li {
+      flex-flow: column;
+    }
+
+    &_rightBox {
+      &_title {
+        font-size: 26px;
+        margin-bottom: 1rem;
+      }
+      &_text {
+        font-size: 16px;
+      }
     }
   }
 }
