@@ -8,6 +8,10 @@
     color: $dark_accent_01;
     font-weight: 900;
     margin-left: 29px;
+
+    html[class="light"] & {
+      color: $light_accent_01;
+    }
   }
   &_little {
     font-size: 12px;
@@ -103,6 +107,14 @@
       &_text {
         font-size: 16px;
       }
+    }
+  }
+}
+
+@media (max-width: 639px) {
+  .skills {
+    &_title {
+      font-size: 28px;
     }
   }
 }

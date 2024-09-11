@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Projects from './projects'
 import Skills from '../skills/main'
+import Experience from '../experience/main'
 
 export default async function ProfileBlock() {
   return (
@@ -38,8 +39,10 @@ export default async function ProfileBlock() {
         </p>
       </div>
       <Projects />
-      <CommandText id='skills' path="#/home/magmafellow" command="wahtareskills" />
+      <CommandText id='skills' path="#/home/magmafellow" command="whatareskills" />
       <Skills />
+      <CommandText id='exp' path='#/home/magmafellow' command="experience" />
+      <Experience />
     </div>
   )
 }
