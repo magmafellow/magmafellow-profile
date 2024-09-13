@@ -1,47 +1,162 @@
 @import '../../variables.module.scss';
 
-
 .track {
   padding: 0 10px;
 
   &_item {
-    margin-bottom: 1rem;
+    margin-bottom: 1.7rem;
     border: 1px solid #666;
-    border-left: 6px solid $dark_accent_02;
-    padding: 4px 8px;
+    border-left: 8px solid $dark_accent_02;
+    padding: 4px 0;
     border-radius: 6px;
 
     &_time {
-      margin-left: 4px;
+      margin-left: 12px;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 18px;
       margin-bottom: 4px;
     }
 
     &_content {
-      margin-left: 4px;
+      margin-left: 12px;
+      margin-right: 8px;
+      margin-bottom: 0.7rem;
     }
-    
+
+    &_hr {
+      height: 1px;
+      background-color: #444;
+      margin-bottom: 0.7rem;
+    }
+
     &_tech {
+      margin-left: 12px;
       display: flex;
       align-items: center;
       gap: 16px;
+      margin-bottom: 0.5rem;
 
       &_icons {
         font-size: 36px;
         display: flex;
         align-items: center;
         gap: 4px;
-        color: skyblue;
+        color: rgb(103, 212, 255);
+
+        html[class*='light'] & {
+          color: rgb(63, 132, 159);
+        }
       }
       &_names {
         font-size: 24px;
         font-weight: 700;
         display: flex;
         align-items: center;
-        gap: 4px;
+        gap: 10px;
         color: $dark_h2_base;
+        transition: 0.2s;
+
+        html[class*='light'] & {
+          color: $light_text_base;
+        }
       }
     }
+    &:hover &_tech_names {
+      color: $dark_h1_base;
+
+      html[class*='light'] & {
+        color: $light_h2_base;
+      }
+    }
+  }
+}
+
+@media (max-width: 658px) {
+  .track {
+    &_item {
+      border-left-width: 4px;
+
+      &_tech {
+        justify-content: center;
+        margin-left: 0;
+
+        &_icons {
+          font-size: 48px;
+          gap: 1rem;
+        }
+        &_names {
+          display: none;
+        }
+      }
+
+      &_content {
+        margin-left: 6px;
+        margin-right: 2px;
+      }
+    }
+  }
+}
+
+.python {
+  color: rgb(223, 223, 45);
+
+  html[class*='light'] & {
+    color: rgb(44, 99, 188);
+  }
+}
+
+.html {
+  color: orangered;
+
+  html[class*='light'] & {
+    color: rgb(216, 62, 6);
+  }
+}
+
+.javascript {
+  color: #ce3f3f;
+
+  html[class*='light'] & {
+    color: #e90f0f;
+  }
+}
+
+.django {
+  color: #25960f;
+
+  html[class*="light"] & {
+    color: #177005;
+  }
+}
+
+.nextjs {
+  color: #d7d7d7;
+
+  html[class*="light"] & {
+    color: #000000;
+  }
+}
+
+.postgresql {
+  color: #4e89b5;
+
+  html[class*="light"] & {
+    color: #345168;
+  }
+}
+
+.drizzle {
+  color: #38e632;
+
+  html[class*="light"] & {
+    color: rgb(29, 136, 13);
+  }
+}
+
+.pencil {
+  color: #ff9f10;
+
+  html[class*="light"] & {
+    color: #c47a0b;
   }
 }
