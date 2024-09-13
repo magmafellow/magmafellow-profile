@@ -5,12 +5,12 @@ import { FaJsSquare } from 'react-icons/fa'
 import { FaHtml5 } from 'react-icons/fa'
 import { IoLogoReact } from 'react-icons/io5'
 import { RiTailwindCssFill } from 'react-icons/ri'
-import { TbBrandDjango } from "react-icons/tb";
-import { RiNextjsFill } from "react-icons/ri";
-import { BiLogoTypescript } from "react-icons/bi";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { FaPencil } from "react-icons/fa6";
-import { SiDrizzle } from "react-icons/si";
+import { TbBrandDjango } from 'react-icons/tb'
+import { RiNextjsFill } from 'react-icons/ri'
+import { BiLogoTypescript } from 'react-icons/bi'
+import { BiLogoPostgresql } from 'react-icons/bi'
+import { FaPencil } from 'react-icons/fa6'
+import { SiDrizzle } from 'react-icons/si'
 import TrackItem from './track-item'
 
 export default function ExpTrack() {
@@ -55,7 +55,8 @@ export default function ExpTrack() {
           </div>
         </div>
         <div className={`${styles.track_item_content}`}>
-          Front-end without back-end is just static things. For this reason I started learning Django. So I did my first full-stack apps.
+          Front-end without back-end is just static things. For this reason I
+          started learning Django. So I did my first full-stack apps.
         </div>
         <div className={`${styles.track_item_hr}`}></div>
         <div className={`${styles.track_item_tech}`}>
@@ -67,8 +68,8 @@ export default function ExpTrack() {
           </div>
         </div>
         <div className={`${styles.track_item_content}`}>
-          I explore the great power of  programming dynamic Web UI
-          with JavaScript.
+          I explore the great power of programming dynamic web UIs with
+          JavaScript.
         </div>
       </div>
 
@@ -110,7 +111,7 @@ export default function ExpTrack() {
           </div>
         </div>
         <div className={`${styles.track_item_content}`}>
-          My darling. Tool that advances me to create full-stack web apps using my favorite tools like React, Tailwind, Drizzle and much more...
+          One of the most trusted and robust Database Manager Systems. I respect Postgresql.
         </div>
         <div className={`${styles.track_item_hr}`}></div>
         <div className={`${styles.track_item_tech}`}>
@@ -122,7 +123,9 @@ export default function ExpTrack() {
           </div>
         </div>
         <div className={`${styles.track_item_content}`}>
-          It is time to power JavaScript. Sometimes it is confused to navigate in code. TypeScript does the best to keep you safe and happy when coding.
+          It is time to power JavaScript. Sometimes it is confused to navigate
+          in code. TypeScript does the best to keep you safe and happy when
+          coding.
         </div>
       </div>
 
@@ -137,7 +140,8 @@ export default function ExpTrack() {
           </div>
         </div>
         <div className={`${styles.track_item_content}`}>
-          My darling. Tool that advances me to create full-stack web apps using my favorite tools like React, Tailwind, Drizzle and much more...
+          My darling. NextJS gives me everything I need to build worthful and
+          decent full-stack applications. It offers effectivly what a developer might request from a framework. Constantly evolving
         </div>
         <div className={`${styles.track_item_hr}`}></div>
         <div className={`${styles.track_item_tech}`}>
@@ -149,7 +153,7 @@ export default function ExpTrack() {
           </div>
         </div>
         <div className={`${styles.track_item_content}`}>
-          Fast, intuitive, fruitful ORM with TypeScript support.
+          Fast, intuitive and fruitful ORM with TypeScript support.
         </div>
       </div>
 
@@ -164,7 +168,10 @@ export default function ExpTrack() {
           </div>
         </div>
         <div className={`${styles.track_item_content}`}>
-          For now I am trying to combine all present skills and technologies for building fast, robust and engaging projects. Meantime I learn something new to evolve myself. Check my GitHub, Blog and other social platforms to be up-to-date with me. 
+          For now I am trying to combine all present skills and technologies for
+          building fast, robust and engaging projects. Meantime I learn
+          something new to evolve myself. Check my GitHub, Blog and other social
+          platforms to be up-to-date with me.
         </div>
       </div>
 
