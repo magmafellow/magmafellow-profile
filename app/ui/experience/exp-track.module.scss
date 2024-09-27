@@ -6,7 +6,7 @@
   &_item {
     margin-bottom: 1.7rem;
     border: 1px solid #666;
-    border-left: 8px solid $dark_accent_02;
+    // border-left: 8px solid $dark_accent_02;
     padding: 4px 0;
     border-radius: 6px;
 
@@ -74,18 +74,19 @@
 @media (max-width: 658px) {
   .track {
     &_item {
-      border-left-width: 4px;
+      // border-left-width: 4px;
 
       &_tech {
-        justify-content: center;
-        margin-left: 0;
+        // justify-content: center;
+        margin-left: 10px;
 
         &_icons {
           font-size: 48px;
           gap: 1rem;
         }
         &_names {
-          display: none;
+          font-size: 20px;
+          // display: none;
         }
       }
 
