@@ -1,6 +1,6 @@
 'use server'
 
-import { asc, between, count, eq, getTableColumns, sql } from 'drizzle-orm'
+import { asc, between, count, desc, eq, getTableColumns, sql } from 'drizzle-orm'
 import projectsDataPlaceholder from '@/app/ui/profile-block/projects-data-placeholder'
 import { unstable_noStore } from 'next/cache'
 import { db } from '@/db'
@@ -28,15 +28,19 @@ export async function getThreeLastProjectsPlaceholder() {
 
 export async function getThreeLastProjects() {
   unstable_noStore()
-  
   const res = await db.select().from(projectsTable).limit(3)
   return res
 }
 
 export async function getLastProjects(limit: number | undefined) {
   unstable_noStore()
-  
   const res = await db.select().from(projectsTable).limit(limit ? limit : 99)
+  return res
+}
+
+export async function getMostRatingProjects(limit: number | undefined) {
+  unstable_noStore()
+  const res = await db.select().from(projectsTable).limit(limit ? limit : 99).orderBy(desc(projectsTable.rating))
   return res
 }
 

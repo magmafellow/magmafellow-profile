@@ -13,7 +13,6 @@ import {
 
 export async function addMannequinProjects() {
   unstable_noStore()
-  
   const res = await Promise.all(projects.map((value) => createProject(value)))
   console.log('Mannequin Projects were SUCCESSFULY added')
 }

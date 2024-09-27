@@ -17,6 +17,7 @@ export const projectsTable = pgTable('projects_table', {
   features: text('features').notNull(), // fiatures json object [['fast', 'to send messages'], ['Secure:', 'Uses strong opinion on encoding']]
   resume: text('resumte').notNull(),
   pictures: text('pictures').notNull(), // pictures array ['/images/01.png', '/images/02.png']
+  rating: integer('rating').notNull(),
 })
 
 export const usersTable = pgTable('users_table', {
