@@ -1,0 +1,16 @@
+@import '../../variables.module.scss';
+
+
+.contact {
+  
+  &_title {
+    font-size: 32px;
+    color: $dark_accent_01;
+    font-weight: 900;
+    margin-left: 29px;
+
+    html[class="light"] & {
+      color: $light_accent_01;
+    }
+  }
+}

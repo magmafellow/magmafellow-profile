@@ -186,3 +186,16 @@ export const blogsTags: InsertBlogTag[] = [
     tag_id: 6,
   },
 ]
+
+export const contacts = [
+  {
+    id: 1,
+    email: 'magmafellow@gmail.com',
+    content: 'I wanted to write you',
+  },
+  {
+    id: 2,
+    email: 'andrew@gmail.com',
+    content: 'Hello I wanted to be a friend of yours',
+  },
+]

@@ -61,6 +61,13 @@ export const blogsTagsTable = pgTable('blogs_tags_table', {
   }),
 })
 
+export const contactsTable = pgTable('contacts_table', {
+  id: serial('id').primaryKey(),
+  email: text('email').notNull(),
+  content: text('content').notNull(),
+  createdAt: timestamp('created_at').notNull().defaultNow(),
+})
+
 export type InsertUser = typeof usersTable.$inferInsert
 export type SelectUser = typeof usersTable.$inferSelect
 

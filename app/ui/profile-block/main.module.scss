@@ -78,6 +78,83 @@
 
 // end profile
 
+.download_box {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 1rem;
+
+  &_link {
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  &_contact {
+    background-color: $dark_accent_02;
+    color: $dark_base_bg;
+    border: 1px solid $dark_accent_02;
+    svg {
+      transition: 0.1s;
+    }
+    &:hover {
+      background-color: $dark_base_bg;
+      color: #fff;
+      border: 1px solid $dark_post_border;
+
+      svg {
+        transform: translateX(3px);
+      }
+    }
+
+    html[class*="light"] & {
+      background-color: $light_accent_02;
+      color: $light_base_bg;
+      border: 1px solid $light_accent_02;
+
+      &:hover {
+        background-color: $dark_post_bg;
+        border: 1px solid $dark_post_bg;
+        color: #fff;
+      }
+    }
+  }
+  &_resume {
+    background-color: $dark_post_bg;
+    border: 1px solid $dark_post_bg;
+    color: #fff;
+
+    svg {
+      transition: 0.3s;
+    }
+
+    &:hover {
+      background-color: $dark_base_bg;
+      border: 1px dashed #fff;
+      
+      svg {
+        transform: translateY(2px);
+      }
+    }
+    html[class*="light"] & {
+      border: 1px solid $light_post_bg;
+      background-color: $light_post_bg;
+      color: $dark_base_bg;
+      svg {
+        transition: 0.3s;
+      }
+      &:hover {
+        background-color: $light_post_border;
+
+      }
+    }
+  }
+}
+
 
 // media block
 @media (max-width: 911px) {

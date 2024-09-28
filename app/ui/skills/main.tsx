@@ -7,7 +7,6 @@ import { HiServer } from "react-icons/hi2";
 export default function Skills() {
   return (
     <>
-
       <h2 className={`${styles.skills_title}`}>Skills</h2>
       <p className={`${styles.skills_little}`}>What types of problem I solve on daily basis</p>
       <ul className={`${styles.skills}`}>
