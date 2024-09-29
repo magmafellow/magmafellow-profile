@@ -78,7 +78,7 @@ html[style="color-scheme: light;"] .shim-carcass::before {
 .blog {}
 .blog h2 {
   font-size: 24px;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.6rem;
   color: #e0e0e0;
   font-weight: 700;
 }
@@ -88,7 +88,7 @@ html[class*="light"] .blog h2 {
 
 .blog h3 {
   font-size: 20px;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
   font-weight: 700;
   color: #c8c8c8;
 }
@@ -97,7 +97,7 @@ html[class*="light"] .blog h3 {
 }
 
 .blog p {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 html[class*="light"] .blog p {
   color: #737373;
@@ -122,6 +122,7 @@ html[class*="light"] .blog .link {
 
 .blog .instructions {
   margin-left: 2rem;
+  margin-bottom: 2rem;
   list-style-type: decimal;
 }
 .blog .instructions li {
@@ -140,13 +141,12 @@ html[class*="light"] .blog .highlight {
 }
 
 .blog .warning {
-  padding: 4px 8px;
+  padding: 4px 8px 4px 32px;
   border-radius: 8px;
   background-color: #856c08;
   color: #f9d442;
   border: 1px solid #ecc62e;
   margin-bottom: 1rem;
-  padding-left: 1.5rem;
   position: relative;
 }
 .blog .warning::before {

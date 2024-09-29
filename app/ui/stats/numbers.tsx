@@ -1,7 +1,7 @@
 import getStats from '@/app/lib/actions/stats'
 import styles from './main.module.scss'
 import { getTotalProjectsNumber } from '@/app/lib/actions/projects'
-import { getTotalBlogsNumber } from '@/app/lib/actions/blog'
+import { getTotalBlogsNumber } from '@/app/lib/actions/blogs'
 import getTotalAbroad from '@/app/lib/actions/abroad'
 
 export default async function Numbers() {
@@ -21,7 +21,7 @@ export default async function Numbers() {
       </div>
       <div className={`${styles.stats_number_box_item}`}>
         <span className={`${styles.stats_value}`}>{totalAbroad}</span>
-        <span className={`${styles.stats_label}`}>times abroad :3</span>
+        <span className={`${styles.stats_label}`}>Times abroad (^_*)</span>
       </div>
     </>
   )
@@ -40,7 +40,7 @@ export function NumbersSkeleton() {
       </div>
       <div className={`${styles.stats_number_box_item}`}>
         <span className={`${styles.stats_value} ${styles.stats_value_skeleton} shim-carcass shim-effect animate an_fast`}></span>
-        <span className={`${styles.stats_label}`}>times abroad :3</span>
+        <span className={`${styles.stats_label}`}>Times abroad :3</span>
       </div>
     </>
   )

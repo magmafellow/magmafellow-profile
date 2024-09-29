@@ -1,5 +1,5 @@
 'use server'
 
 export default async function getTimesAbroad() {
-  return 3
+  return 7
 }

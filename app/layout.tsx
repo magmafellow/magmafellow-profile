@@ -12,9 +12,9 @@ export const runtime = 'nodejs'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Carcass for further apps',
+  title: 'magmafellow',
   description:
-    'There are pretty prebuilt auth solution(signup login DTO DLA), some fonts optimazed, ready, theme toggler(dark light)',
+    'This is about all my work, skills and experience I meet on my developing path',
 }
 
 export default function RootLayout({

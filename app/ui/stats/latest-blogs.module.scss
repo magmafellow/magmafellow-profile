@@ -22,8 +22,14 @@
     &_item {
       display: flex;
       align-items: center;
-      padding: 0 10px;
+      padding: 6px 10px;
       border-bottom: 1px solid $dark_post_border;
+      position: relative;
+
+      &_skeleton {
+        height: 34px;
+
+      }
 
       &:hover {
         transition: 0.1s;
@@ -43,9 +49,17 @@
         border-bottom: none;
       }
 
-      & h3 {
+      &_title {
         flex: 1 1 auto;
         font-size: 14px;
+
+        &_skeleton {
+          flex: 0 1 auto;
+          background-color: $dark_post_bg;
+          width: 7rem;
+          height: 1.1rem;
+          border-radius: 8px;
+        }
       }
 
       & div {
@@ -55,15 +69,40 @@
         align-items: center;
         justify-content: center;
         font-size: 12px;
-        color: $dark_text_second;
+        color: $dark_text_second;        
+      }
+      &_span1 {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        right: 5px;
+        width: 30px;
+        top: 3px;
 
-        span:first-child {
-          position: relative;
-          top: 4px;
+        &_skeleton {
+          margin: 0 auto;
+          right: 10px;
+          width: 1.3em;
+          height: 1em;
+          background-color: $dark_post_bg;
+          overflow: hidden;
+          border-radius: 4px;
         }
-        span:last-child {
-          position: relative;
-          bottom: 4px;
+      }
+      &_span2 {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 30px;
+        right: 5px;
+        bottom: 3px;
+
+        &_skeleton {
+          width: 2em;
+          height: 1em;
+          background-color: $dark_post_bg;
+          overflow: hidden;
+          border-radius: 4px;
         }
       }
     }

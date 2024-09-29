@@ -4,6 +4,16 @@ import BlogpostTags from '@/app/ui/blogpost-tags/main'
 import DefaultGrid from '@/app/ui/default-grid/main'
 import BlogSpecific from '@/app/ui/blog-specific/main'
 
+export async function generateMetadata({
+  params
+}: {
+  params: { id: string }
+}) {
+  return {
+    title: `blog ${params.id}`
+  }
+}
+
 export default async function Page({ params }: { params: { id: string } }) {
   return (
     <DefaultGrid>

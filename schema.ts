@@ -48,7 +48,8 @@ export const blogsTable = pgTable('blogs_table', {
   title: text('title').notNull(),
   bite: text('bite').notNull(),
   date_created: timestamp('date_created').defaultNow().notNull(),
-  content: text('content').notNull(),
+  content: text('content').notNull(), // markup content
+  minToRead: integer('min_to_read')
 })
 
 export const blogsTagsTable = pgTable('blogs_tags_table', {

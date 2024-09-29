@@ -21,10 +21,15 @@ export async function getLastBlogsMannequin(limit: number) {
   return array
 }
 
+export async function getTotalBlogsNumber() {
+  const res = await db.select().from(blogsTable)
+  return res.length
+}
+
 export async function getLatestBlogs(limit: number = 99) {
   unstable_noStore()
   
-  const res = await db.select().from(blogsTable).limit(limit)
+  const res = await db.select().from(blogsTable).limit(limit).orderBy(blogsTable.date_created)
   return res
 }
 

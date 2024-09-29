@@ -4,6 +4,11 @@ import BlogpostTags from '@/app/ui/blogpost-tags/main'
 import ProjectsBlock from '../ui/projects-block/main'
 import DefaultGrid from '../ui/default-grid/main'
 
+export const metadata = {
+  title: 'projects | magmafellow',
+  description: 'Projects that I created'
+}
+
 export default async function Page() {
   return (
     <DefaultGrid>
