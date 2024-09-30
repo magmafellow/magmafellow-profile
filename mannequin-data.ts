@@ -1,4 +1,3 @@
-import { v4 } from 'uuid'
 import type {
   InsertBlog,
   InsertBlogTag,
@@ -76,6 +75,32 @@ export const projects: Array<InsertProject> = [
     resume:
       'Tomato Focus - App that provides functionality based on Pomodoro-Technique that helps keep you in clear, active state',
     rating: 3,
+  },
+  {
+    id: 504,
+    name: 'Rocoose',
+    description: 'A social network where you can connect with people.',
+    features: JSON.stringify([
+      [
+        'Progressive:',
+        'The app adheres the most vital rules of design and intercations with the app.',
+      ],
+      [
+        'Powerful:',
+        'There are variety of abilities to get in touch with people - stories, posts, chats and more!',
+      ],
+      ['Sync In:', 'Use it on mobile, desctop or tablet. Wherever!'],
+    ]),
+    pictures: JSON.stringify([
+      'rocoose-01.png',
+      'rocoose-02.png',
+      'rocoose-03.png',
+      'rocoose-04.png',
+      'rocoose-05.png',
+      'rocoose-06.png',
+    ]),
+    resume: 'The social network you must try at least once!',
+    rating: 7,
   },
 ]
 
