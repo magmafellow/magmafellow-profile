@@ -198,3 +198,18 @@ html[class*="light"] .blog .well {
 }
 
 /* end blog styles */
+
+.rotate-infinite {
+  animation-name: rotateInfinite;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotateInfinite {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
