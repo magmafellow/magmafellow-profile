@@ -30,6 +30,7 @@ export const projects: Array<InsertProject> = [
     ]),
     resume:
       'If you wanted to use something new in the world of messangers but still having security and speed - Choose Direct Chat',
+    url: 'https://direct-chat.vercel.app/',
     rating: 5,
   },
   {
@@ -41,6 +42,7 @@ export const projects: Array<InsertProject> = [
     resume:
       'Static website. In which I try new and already known techniques to gain layout skills',
     rating: 2,
+    url: 'https://magmafellow.github.io/markup-explore-the-nature/',
   },
   {
     id: 502,
@@ -52,6 +54,7 @@ export const projects: Array<InsertProject> = [
     pictures: JSON.stringify(['design-think-01.png']),
     resume:
       'Static website. In which I try new and already known techniques to gain layout skills',
+    url: 'https://magmafellow-profile.vercel.app/undefined',
     rating: 2,
   },
   {
@@ -74,6 +77,7 @@ export const projects: Array<InsertProject> = [
     ]),
     resume:
       'Tomato Focus - App that provides functionality based on Pomodoro-Technique that helps keep you in clear, active state',
+    url: 'https://tomato-timer-app.vercel.app/',
     rating: 3,
   },
   {
@@ -99,8 +103,30 @@ export const projects: Array<InsertProject> = [
       'rocoose-05.png',
       'rocoose-06.png',
     ]),
+    url: 'https://rocoose.vercel.app/feed',
     resume: 'The social network you must try at least once!',
     rating: 7,
+  },
+  {
+    id: 505,
+    name: 'Book Store',
+    description: 'A website to improve layout and js-related skills',
+    features: JSON.stringify([
+      [
+        'Layout:',
+        'For this project I use some advanced technieues to create better experience',
+      ],
+      ['Fast:', 'I used best practices to make website fast'],
+    ]),
+    pictures: JSON.stringify([
+      'book-store-01.png',
+      'book-store-02.png',
+      'book-store-03.png',
+      'book-store-04.png',
+    ]),
+    resume: 'This website helpled me to improve layout skills.',
+    rating: 3,
+    url: 'https://magmafellow.github.io/markup-book-store/',
   },
 ]
 

@@ -18,7 +18,8 @@ export const projectsTable = pgTable('projects_table', {
   resume: text('resumte').notNull(),
   pictures: text('pictures').notNull(), // pictures array ['/images/01.png', '/images/02.png']
   rating: integer('rating').notNull(),
-  // startedAt: timestamp('started_at').notNull().defaultNow(),
+  startedAt: timestamp('started_at').notNull().defaultNow(),
+  url: text('url'),
 })
 
 export const usersTable = pgTable('users_table', {
