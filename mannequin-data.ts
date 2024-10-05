@@ -165,7 +165,7 @@ export const tags: Array<InsertTag> = [
   {
     id: 8,
     name: 'nextjs',
-    description: 'My favotirte framework for web with React.'
+    description: 'My favotirte framework for web with React.',
   },
   {
     id: 9,
@@ -176,13 +176,13 @@ export const tags: Array<InsertTag> = [
     name: 'postgres',
   },
   {
-    id: 11, 
-    name: 'tailwind'
+    id: 11,
+    name: 'tailwind',
   },
   {
     id: 12,
-    name: 'drizzle'
-  }
+    name: 'drizzle',
+  },
 ]
 
 export const projectsTags: Array<InsertProjectTag> = [
@@ -212,6 +212,31 @@ export const projectsTags: Array<InsertProjectTag> = [
     id: 74,
     project_id: 502,
     tag_id: 2,
+  },
+  {
+    id: 75,
+    project_id: 504,
+    tag_id: 9,
+  },
+  {
+    id: 76,
+    project_id: 504,
+    tag_id: 8,
+  },
+  {
+    id: 77,
+    project_id: 504,
+    tag_id: 10,
+  },
+  {
+    id: 78,
+    project_id: 504,
+    tag_id: 11,
+  },
+  {
+    id: 79,
+    project_id: 504,
+    tag_id: 12,
   },
 ]
 
