@@ -111,6 +111,27 @@ export const tags: Array<InsertTag> = [
     name: 'performance',
     description: 'Performance of your apps',
   },
+  {
+    id: 8,
+    name: 'nextjs',
+    description: 'My favotirte framework for web with React.'
+  },
+  {
+    id: 9,
+    name: 'social',
+  },
+  {
+    id: 10,
+    name: 'postgres',
+  },
+  {
+    id: 11, 
+    name: 'tailwind'
+  },
+  {
+    id: 12,
+    name: 'drizzle'
+  }
 ]
 
 export const projectsTags: Array<InsertProjectTag> = [
