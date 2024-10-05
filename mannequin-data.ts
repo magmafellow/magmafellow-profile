@@ -1,4 +1,3 @@
-import { v4 } from 'uuid'
 import type {
   InsertBlog,
   InsertBlogTag,
@@ -31,6 +30,7 @@ export const projects: Array<InsertProject> = [
     ]),
     resume:
       'If you wanted to use something new in the world of messangers but still having security and speed - Choose Direct Chat',
+    url: 'https://direct-chat.vercel.app/',
     rating: 5,
   },
   {
@@ -42,6 +42,7 @@ export const projects: Array<InsertProject> = [
     resume:
       'Static website. In which I try new and already known techniques to gain layout skills',
     rating: 2,
+    url: 'https://magmafellow.github.io/markup-explore-the-nature/',
   },
   {
     id: 502,
@@ -53,6 +54,7 @@ export const projects: Array<InsertProject> = [
     pictures: JSON.stringify(['design-think-01.png']),
     resume:
       'Static website. In which I try new and already known techniques to gain layout skills',
+    url: 'https://magmafellow-profile.vercel.app/undefined',
     rating: 2,
   },
   {
@@ -75,7 +77,56 @@ export const projects: Array<InsertProject> = [
     ]),
     resume:
       'Tomato Focus - App that provides functionality based on Pomodoro-Technique that helps keep you in clear, active state',
+    url: 'https://tomato-timer-app.vercel.app/',
     rating: 3,
+  },
+  {
+    id: 504,
+    name: 'Rocoose',
+    description: 'A social network where you can connect with people.',
+    features: JSON.stringify([
+      [
+        'Progressive:',
+        'The app adheres the most vital rules of design and intercations with the app.',
+      ],
+      [
+        'Powerful:',
+        'There are variety of abilities to get in touch with people - stories, posts, chats and more!',
+      ],
+      ['Sync In:', 'Use it on mobile, desctop or tablet. Wherever!'],
+    ]),
+    pictures: JSON.stringify([
+      'rocoose-01.png',
+      'rocoose-02.png',
+      'rocoose-03.png',
+      'rocoose-04.png',
+      'rocoose-05.png',
+      'rocoose-06.png',
+    ]),
+    url: 'https://rocoose.vercel.app/feed',
+    resume: 'The social network you must try at least once!',
+    rating: 7,
+  },
+  {
+    id: 505,
+    name: 'Book Store',
+    description: 'A website to improve layout and js-related skills',
+    features: JSON.stringify([
+      [
+        'Layout:',
+        'For this project I use some advanced technieues to create better experience',
+      ],
+      ['Fast:', 'I used best practices to make website fast'],
+    ]),
+    pictures: JSON.stringify([
+      'book-store-01.png',
+      'book-store-02.png',
+      'book-store-03.png',
+      'book-store-04.png',
+    ]),
+    resume: 'This website helpled me to improve layout skills.',
+    rating: 3,
+    url: 'https://magmafellow.github.io/markup-book-store/',
   },
 ]
 

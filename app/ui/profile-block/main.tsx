@@ -38,7 +38,7 @@ export default async function ProfileBlock() {
             Contact
             <FaArrowRightLong />
           </Link>
-          <Link className={`${styles.download_box_link} ${styles.download_box_resume}`} href="/assets/resume.pdf">
+          <Link download className={`${styles.download_box_link} ${styles.download_box_resume}`} href="/assets/resume.pdf">
             Get CV
             <FaDownload />
           </Link>

@@ -18,6 +18,8 @@ export const projectsTable = pgTable('projects_table', {
   resume: text('resumte').notNull(),
   pictures: text('pictures').notNull(), // pictures array ['/images/01.png', '/images/02.png']
   rating: integer('rating').notNull(),
+  startedAt: timestamp('started_at').notNull().defaultNow(),
+  url: text('url'),
 })
 
 export const usersTable = pgTable('users_table', {
@@ -49,7 +51,7 @@ export const blogsTable = pgTable('blogs_table', {
   bite: text('bite').notNull(),
   date_created: timestamp('date_created').defaultNow().notNull(),
   content: text('content').notNull(), // markup content
-  minToRead: integer('min_to_read')
+  minToRead: integer('min_to_read'),
 })
 
 export const blogsTagsTable = pgTable('blogs_tags_table', {

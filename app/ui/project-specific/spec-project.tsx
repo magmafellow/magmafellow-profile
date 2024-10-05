@@ -74,7 +74,7 @@ export default async function SpecProject({
       </div>
       <div className={`${styles.specpr_goto}`}>
         <Link
-          href="https://google.com"
+          href={project.url!}
           className={`${styles.specpr_goto_btn} shim-carcass shim-hover animate an_fast`}
         >
           GO TO

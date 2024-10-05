@@ -6,11 +6,11 @@ import validator from 'validator'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { useFormState, useFormStatus } from 'react-dom'
 import { createContact } from '@/app/lib/actions/contacts'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 
 export default function ContactForm() {
   const [errormsg, setErrormsg] = useState('')
   const [message, dispatch] = useFormState(createContact, undefined)
-  const { pending } = useFormStatus()
 
   const validateEmail = (e: any) => {
     const email = e.target.value
@@ -56,15 +56,23 @@ export default function ContactForm() {
       )}
 
       <div className={`${styles.button_box}`}>
-        <button
-          disabled={errormsg !== ''}
-          className={`${styles.button_box_btn}`}
-          type="submit"
-        >
-          {pending ? 'please wait' : 'Submit'}
-          <FaArrowRightLong />
-        </button>
+        <SubmitButton errormsg={errormsg} />
       </div>
     </form>
+  )
+}
+
+export function SubmitButton({ errormsg }: { errormsg: string }) {
+  const { pending } = useFormStatus()
+
+  return (
+    <button
+      disabled={errormsg !== ''}
+      className={`${styles.button_box_btn}`}
+      type="submit"
+    >
+      Submit
+      {pending? <AiOutlineLoading3Quarters className='rotate-infinite text-lg' /> : <FaArrowRightLong />}
+    </button>
   )
 }
