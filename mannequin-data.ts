@@ -183,61 +183,112 @@ export const tags: Array<InsertTag> = [
     id: 12,
     name: 'drizzle',
   },
+  {
+    id: 13,
+    name: 'auth',
+  },
+  {
+    id: 14,
+    name: 'messanger',
+  },
+  {
+    id: 15,
+    name: 'timer',
+  },
+  {
+    id: 16,
+    name: 'layout'
+  },
 ]
 
 export const projectsTags: Array<InsertProjectTag> = [
   {
     id: 70,
     project_id: 500,
-    tag_id: 1,
+    tag_id: 11,
   },
   {
     id: 71,
     project_id: 500,
-    tag_id: 2,
+    tag_id: 13,
   },
   {
     id: 72,
     project_id: 500,
     tag_id: 6,
   },
-
   {
     id: 73,
-    project_id: 501,
-    tag_id: 2,
+    project_id: 500,
+    tag_id: 14,
   },
 
   {
     id: 74,
+    project_id: 501,
+    tag_id: 2,
+  },
+  {
+    id: 86,
+    project_id: 501,
+    tag_id: 16,
+  }
+  ,
+  {
+    id: 75,
     project_id: 502,
     tag_id: 2,
   },
   {
-    id: 75,
-    project_id: 504,
-    tag_id: 9,
+    id: 85,
+    project_id: 502,
+    tag_id: 16,
   },
   {
     id: 76,
     project_id: 504,
-    tag_id: 8,
+    tag_id: 9,
   },
   {
     id: 77,
     project_id: 504,
-    tag_id: 10,
+    tag_id: 8,
   },
   {
     id: 78,
     project_id: 504,
-    tag_id: 11,
+    tag_id: 10,
   },
   {
     id: 79,
     project_id: 504,
+    tag_id: 11,
+  },
+  {
+    id: 80,
+    project_id: 504,
     tag_id: 12,
   },
+  {
+    id: 81,
+    project_id: 503,
+    tag_id: 15,
+  },
+  {
+    id: 82,
+    project_id: 503,
+    tag_id: 11,
+  },
+  {
+    id: 83,
+    project_id: 505,
+    tag_id: 16,
+  },
+  {
+    id: 84,
+    project_id: 505,
+    tag_id: 2,
+  }
 ]
 
 export const users: InsertUser[] = [
