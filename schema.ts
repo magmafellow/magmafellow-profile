@@ -57,10 +57,10 @@ export const blogsTable = pgTable('blogs_table', {
 export const blogsTagsTable = pgTable('blogs_tags_table', {
   id: integer('id').primaryKey(),
   blog_id: integer('blog_id').references(() => blogsTable.id, {
-    onDelete: 'set null',
+    onDelete: 'cascade',
   }),
   tag_id: integer('tag_id').references(() => tagsTable.id, {
-    onDelete: 'set null',
+    onDelete: 'cascade',
   }),
 })
 

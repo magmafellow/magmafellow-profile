@@ -2,7 +2,7 @@
 
 .form {
   border: 1px solid #444;
-  width: 90%;
+  // width: 90%;
   margin: 0 auto;
   border-radius: 4px;
   padding: 10px 20px;
@@ -31,9 +31,12 @@
 
 .editor-container {
   margin: 0 auto;
+  max-width: 900px;
   position: relative;
   min-height: 500px;
   margin-bottom: 24px;
+  border-radius: 16px;
+  overflow: hidden;
 }
 .editor {
   position: absolute;

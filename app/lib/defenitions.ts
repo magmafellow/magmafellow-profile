@@ -17,9 +17,11 @@ export const updateProfileSchema = z.object({
 })
 
 export const blogCreateSchema = z.object({
-  title: z.string().min(5),
-  bite: z.string().min(10),
-  content: z.string().min(30),
+  title: z.string().min(5, 'Title field should contain at least 5 chars'),
+  bite: z.string().min(10, 'Bite field should contain at least 10 chars'),
+  content: z.string().min(30, 'Content field should be at least 30 chars'),
+  minToRead: z.coerce.number(),
+  tags: z.string().min(1, 'Tags is required field'),
 })
 
 export const contactSchema = z.object({

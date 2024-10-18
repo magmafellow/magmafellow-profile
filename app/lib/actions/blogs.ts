@@ -3,8 +3,9 @@
 import { db } from "@/db"
 import { blogs } from "@/mannequin-data"
 import { blogsTable, blogsTagsTable, tagsTable } from "@/schema"
-import { eq, max } from "drizzle-orm"
+import { desc, eq, max } from "drizzle-orm"
 import { unstable_noStore } from "next/cache"
+import { blogCreateSchema } from "../defenitions"
 
 
 export async function getLastBlogsMannequin(limit: number) {
@@ -45,4 +46,35 @@ export async function findHighestIdFromBlogs() {
   
   const q1 = await db.select({ value: max(blogsTable.id) }).from(blogsTable)
   return q1[0].value
+}
+
+export async function addNewBlogPost(prevState: any, formData: FormData) {
+  unstable_noStore()
+  
+  const formObject = {
+    title: formData.get('title'),
+    bite: formData.get('bite'),
+    content: formData.get('content'),
+    minToRead: formData.get('minToRead'),
+    tags: formData.get('tags'),
+  }
+
+  const parsed = blogCreateSchema.safeParse(formObject)
+  if(!parsed.success) {
+    console.log('do not pass')
+    console.log(parsed.error)
+    return {
+      error: 'Fields do not pass requirements'
+    }
+  } else {
+    const lastBlogPostId = await getLastIdToBlogPost()
+
+    console.log({ ...parsed.data, id: lastBlogPostId })
+    const incrementedId = lastBlogPostId + 1
+    await db.insert(blogsTable).values({ ...parsed.data, id: incrementedId })
+  }
+}
+
+export async function getLastIdToBlogPost() {
+  return (await db.select().from(blogsTable).orderBy(desc(blogsTable.id)))[0].id
 }
