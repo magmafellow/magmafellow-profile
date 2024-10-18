@@ -9,6 +9,7 @@ import Experience from '../experience/main'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { FaDownload } from 'react-icons/fa6'
 import Contact from '../skills2/main'
+import AppearText from '../appear-text'
 
 export default async function ProfileBlock() {
   return (
@@ -16,7 +17,9 @@ export default async function ProfileBlock() {
       <CommandText id="whoami" path="#/home/magmafellow" command="whoami" />
       <div className={`${styles.profile_me}`}>
         <h1 className={`${styles.profile_me_title}`}>
-          Full-stack web Engineer
+          <AppearText onBackEnterRestart id="appear_full-stack">
+            Full-stack web Engineer
+          </AppearText>
         </h1>
         <p className={`${styles.profile_me_info} ${styles.p_limited}`}>
           Hello! I am magmafellow. I am a full-stack developer. I enjoy creating
@@ -34,11 +37,18 @@ export default async function ProfileBlock() {
           contact me.
         </p>
         <div className={styles.download_box}>
-          <Link className={`${styles.download_box_link} ${styles.download_box_contact}`} href="#contact">
+          <Link
+            className={`${styles.download_box_link} ${styles.download_box_contact}`}
+            href="#contact"
+          >
             Contact
             <FaArrowRightLong />
           </Link>
-          <Link download className={`${styles.download_box_link} ${styles.download_box_resume}`} href="/assets/resume.pdf">
+          <Link
+            download
+            className={`${styles.download_box_link} ${styles.download_box_resume}`}
+            href="/assets/resume.pdf"
+          >
             Get CV
             <FaDownload />
           </Link>
@@ -50,7 +60,9 @@ export default async function ProfileBlock() {
         command="whatareprojects"
       />
       <div className={`${styles.profile_projects}`}>
-        <h2 className={`${styles.profile_projects_title}`}>Projects</h2>
+        <h2 className={`${styles.profile_projects_title}`}>
+          <AppearText onBackEnterRestart={false} id="appear_projects">Projects</AppearText>
+        </h2>
         <p className={`${styles.profile_projects_little} ${styles.p_limited}`}>
           Explore my ideas. I have worked on 18+ ones.
         </p>

@@ -7,6 +7,7 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 import { useFormState, useFormStatus } from 'react-dom'
 import { createContact } from '@/app/lib/actions/contacts'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
+import AppearShadow from '../appear-shadow'
 
 export default function ContactForm() {
   const [errormsg, setErrormsg] = useState('')
@@ -29,21 +30,26 @@ export default function ContactForm() {
 
   return (
     <form className={`${styles.form}`} action={dispatch}>
-      <input
-        data-error={errormsg !== ''}
-        type="email"
-        name="email"
-        id="email"
-        required
-        placeholder="Email"
-        onChange={validateEmail}
-      />
+      <AppearShadow id="appear_form_email">
+        <input
+          data-error={errormsg !== ''}
+          type="email"
+          name="email"
+          id="email"
+          required
+          placeholder="Email"
+          onChange={validateEmail}
+        />
+      </AppearShadow>
+
       {errormsg && (
         <div className={styles.email_error_box}>
           <p className={`${styles.email_error}`}>{errormsg}</p>
         </div>
       )}
-      <textarea name="content" id="content" placeholder="Message"></textarea>
+      <AppearShadow id='appear_form_content'>
+        <textarea name="content" id="content" placeholder="Message"></textarea>
+      </AppearShadow>
       {message?.success && (
         <div>
           <p className={styles.message_success}>{message.success}</p>
@@ -72,7 +78,11 @@ export function SubmitButton({ errormsg }: { errormsg: string }) {
       type="submit"
     >
       Submit
-      {pending? <AiOutlineLoading3Quarters className='rotate-infinite text-lg' /> : <FaArrowRightLong />}
+      {pending ? (
+        <AiOutlineLoading3Quarters className="rotate-infinite text-lg" />
+      ) : (
+        <FaArrowRightLong />
+      )}
     </button>
   )
 }
