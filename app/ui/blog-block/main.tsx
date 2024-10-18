@@ -14,9 +14,9 @@ export default async function BlogBlock() {
       <CommandText id="get-blog" path="#/home/magmafellow" command="get-blog" />
       <div className={`${styles.blog_box_title_add}`}>
         <h1 className={`${styles.blog_page_title}`}>Blog</h1>
-        <Link href="/blog/add">
+        <a href="/blog/add">
           <FaCirclePlus className={`${styles.blog_addBtn}`} />
-        </Link>
+        </a>
       </div>
       <div className={`${styles.blogs}`}>
         

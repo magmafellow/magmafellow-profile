@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styles from './blog-item.module.scss'
 import { IoIosCalendar } from 'react-icons/io'
 import { getTagsToBlog } from '@/app/lib/actions/blogs'
+import { getDateString } from '@/app/lib/time-utils'
 
 export default async function BlogItem({
   id,
@@ -18,6 +19,7 @@ export default async function BlogItem({
 }) {
   // const tags = ['typescirpt', 'css']  // tags are got by id prop (id of blog)
   const tags = await getTagsToBlog(id, 99)
+
   return (
     <div className={`${styles.blog_item}`}>
       <h2 className={`${styles.blog_item_title}`}>
@@ -33,14 +35,14 @@ export default async function BlogItem({
         <div className={`${styles.blog_item_box_date}`}>
           <IoIosCalendar />
           <div className={`${styles.blog_item_box_date_date}`}>
-            {date_created.getDay()}
+            {getDateString(date_created)}
           </div>
         </div>
         <div className={`${styles.blog_item_box_tags}`}>
           {tags?.map((tagObj, index) => <div key={index} className={`${styles.blog_item_box_tags_tag}`}>{tagObj}</div> )}
         </div>
         <div className={`${styles.blog_item_box_btn}`}>
-          <Link href='/blog/1' className={`${styles.blog_item_box_btn_btn}`}>
+          <Link href={`/blog/${id}`} className={`${styles.blog_item_box_btn_btn}`}>
             Check out
           </Link>
         </div>

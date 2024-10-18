@@ -6,7 +6,9 @@ import { blogsTable, blogsTagsTable, tagsTable } from "@/schema"
 import { desc, eq, max } from "drizzle-orm"
 import { unstable_noStore } from "next/cache"
 import { blogCreateSchema } from "../defenitions"
-
+import lodash from 'lodash'
+import { addNewBlogTag } from "./blogs-tags"
+import { getTagIdByTagName } from "./tags"
 
 export async function getLastBlogsMannequin(limit: number) {
   await new Promise((resolve, reject) => {  // artificial delay
@@ -22,7 +24,14 @@ export async function getLastBlogsMannequin(limit: number) {
   return array
 }
 
+export async function getBlogById(blogId: number) {
+  unstable_noStore()
+  const r = await db.select().from(blogsTable).where(eq(blogsTable.id, blogId))
+  return r[0]
+}
+
 export async function getTotalBlogsNumber() {
+  unstable_noStore()
   const res = await db.select().from(blogsTable)
   return res.length
 }
@@ -37,8 +46,8 @@ export async function getLatestBlogs(limit: number = 99) {
 export async function getTagsToBlog(blogId: number, limit: number) {
   unstable_noStore()
   
-  const res = await db.select().from(blogsTagsTable).where(eq(blogsTagsTable.blog_id, blogId)).leftJoin(tagsTable, eq(blogsTagsTable.tag_id, tagsTable.id)).limit(limit ? limit : 99)
-  return res.map((val) => val.tags_table?.name)
+  const res = await db.select().from(blogsTagsTable).where(eq(blogsTagsTable.blog_id, blogId)).innerJoin(tagsTable, eq(blogsTagsTable.tag_id, tagsTable.id)).limit(limit ? limit : 99)
+  return res.map((item) => item.tags_table.name)
 }
 
 export async function findHighestIdFromBlogs() {
@@ -61,17 +70,25 @@ export async function addNewBlogPost(prevState: any, formData: FormData) {
 
   const parsed = blogCreateSchema.safeParse(formObject)
   if(!parsed.success) {
-    console.log('do not pass')
-    console.log(parsed.error)
     return {
       error: 'Fields do not pass requirements'
     }
   } else {
     const lastBlogPostId = await getLastIdToBlogPost()
-
+    const blogTags = parsed.data.tags.split(',').map((tag) => lodash.trim(tag))
+    
     console.log({ ...parsed.data, id: lastBlogPostId })
     const incrementedId = lastBlogPostId + 1
     await db.insert(blogsTable).values({ ...parsed.data, id: incrementedId })
+
+    blogTags.forEach(async (tag) => {
+      const tagId = await getTagIdByTagName(tag)
+      await addNewBlogTag(incrementedId, tagId)
+    })
+
+    return {
+      success: 'New Blog Post was added.'
+    }
   }
 }
 

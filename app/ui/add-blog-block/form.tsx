@@ -5,6 +5,9 @@ import styles from './form.module.scss'
 import Script from 'next/script'
 import { useFormState } from 'react-dom'
 import { addNewBlogPost } from '@/app/lib/actions/blogs'
+import ModalV2, { ModalV2Activator } from '../modal-v2'
+import { FaXmark } from 'react-icons/fa6'
+import '../modal-v2.css'
 
 export default function Form() {
   const [message, dispatch] = useFormState(addNewBlogPost, undefined)
@@ -53,9 +56,24 @@ export default function Form() {
     <form
       id="blog_id"
       name="blog_form"
-      className={`${styles.form}`}
+      className={`${styles.form} relative`}
       action={dispatch}
     >
+      <ModalV2Activator className="bg-sky-500 hover:bg-sky-700 transition text-white rounded absolute right-4 top-4 py-3 px-5" text='faq' id='modal-add-new-blog-info' />
+      <ModalV2 id="modal-add-new-blog-info">
+        <div className="modal bg-slate-800 relative min-h-[370px] px-7 pt-7 pb-5 min-w-[300px] rounded-md border border-gray-600">
+          <h3 className="font-bold text-2xl mb-3">How to use content field</h3>
+          <p className='mb-4'>Content field is an html markup.</p>
+          <p className='mb-4'>Everything is wrapped in div with class of blog</p>
+          <p className='mb-4'>Here is simple example of blog</p>
+          <a target='_blank' href='/images/content-example.png' className='block h-[500px] w-full'>
+            <img className='w-full h-full object-contain object-center' src="/images/content-example.png" alt="content example" />
+          </a>
+          <FaXmark
+            className="modal-closer absolute -top-3 -right-3 text-2xl text-white hover:text-sky-300 cursor-pointer"
+          />
+        </div>
+      </ModalV2>
       <script
         async
         src="https://cdn.jsdelivr.net/npm/ace-builds@1.36.0/src/ace.js"
@@ -106,6 +124,16 @@ export default function Form() {
       <div className={`${styles['editor-container']}`}>
         <div id="editor_ace" className={`${styles.editor}`}></div>
       </div>
+
+      <div className='mb-6'>
+        <div>
+          <p className='text-white text-center'>{message?.success}</p>
+        </div>
+        <div>
+          <p className='text-red-600 text-center'>{message?.error}</p>
+        </div>
+      </div>
+      
       <div className={`${styles.btnBox}`}>
         <button
           className={`${styles.btnBox_btn}`}
