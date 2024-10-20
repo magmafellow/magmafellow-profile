@@ -9,9 +9,9 @@ import LanguageBox from './language'
 import ThemeToggle from '../toggle-theme-mode'
 import AppearInnerBox from '../appear-inner-box'
 
-export default function InfoCard() {
+export default function InfoCard({ className }: { className?: string }) {
   return (
-    <div className={`${styles.info_card}`}>
+    <div className={`${styles.info_card} ${className}`}>
       <div className={`${styles.info_card__img_box}`}>
         <Image
           width={80}

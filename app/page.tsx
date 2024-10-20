@@ -22,7 +22,7 @@ export default async function Page() {
     <DefaultGrid>
       <Stats />
       <AppearInnerBox onBackEnterRestart={false} id="appear-info-card">
-        <InfoCard />
+        <InfoCard className='opacity-0' />
       </AppearInnerBox>
       <BlogpostTags />
       <ProfileBlock />
