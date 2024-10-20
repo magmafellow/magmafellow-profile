@@ -3,7 +3,10 @@
 
 .contact {
   
-  &_title {
+  // GSAP animations
+  &_title span {
+    opacity: 0;
+    transform: translate(0, 24px);
     font-size: 32px;
     color: $dark_accent_01;
     font-weight: 900;

@@ -38,6 +38,11 @@ export async function getTotalBlogsNumber() {
 
 export async function getLatestBlogs(limit: number = 99) {
   unstable_noStore()
+
+  // demo delay
+  // await new Promise((resolve, reject) => {
+  //   setTimeout(() => resolve(true), 5000)
+  // })
   
   const res = await db.select().from(blogsTable).limit(limit).orderBy(blogsTable.date_created)
   return res

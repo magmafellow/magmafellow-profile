@@ -17,7 +17,7 @@ export default function AppearText({
 
   useGSAP(
     () => {
-      gsap.from(`#${id}`, {
+      gsap.to(`#${id}`, {
         scrollTrigger: {
           trigger: `#${id}`,
           start: 'top 100%',
@@ -25,10 +25,11 @@ export default function AppearText({
           // markers: true,
           toggleActions: `play resume ${onBackEnterRestart ? 'restart' : 'none'} none`,
         },
-        y: 24,
-        scale: 0.8,
-        opacity: 0.3,
-        duration: 0.7,
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+        ease: 'elastic.out',
         // delay: 0.3,
       })
     },

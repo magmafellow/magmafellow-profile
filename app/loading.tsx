@@ -7,22 +7,19 @@ import InfoCard from './ui/info-card/main'
 import BlogpostTags from './ui/blogpost-tags/main'
 import ProfileBlock from './ui/profile-block/main'
 import DefaultGrid from './ui/default-grid/main'
+import StatsLoading from './ui/stats/loading-placeholder'
+import LoadingMain from './ui/loading-main/main'
 
-export default async function Page() {
+export default function Page() {
   // const session = await auth()
   // console.log(session)
 
-  // demo delay
-  await new Promise((resolve, reject) => {
-    setTimeout(() => resolve(true), 3000)
-  })
-
   return (
     <DefaultGrid>
-      <Stats />
+      <StatsLoading />
       <InfoCard />
       <BlogpostTags />
-      <ProfileBlock />
+      <LoadingMain />
     </DefaultGrid>
   )
 }

@@ -1,0 +1,31 @@
+.loading {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__iconWrapper {
+    width: 50px;
+    height: 50px;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+      object-position: center;
+      object-fit: contain;
+      animation-name: rotateCircle;
+      animation-duration: 0.5s;
+      animation-iteration-count: 100;
+      animation-timing-function: linear;
+    }
+  }
+}
+
+@keyframes rotateCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

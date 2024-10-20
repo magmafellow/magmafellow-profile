@@ -8,7 +8,7 @@ import Skills from '../skills/main'
 import Experience from '../experience/main'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import { FaDownload } from 'react-icons/fa6'
-import Contact from '../skills2/main'
+import Contact from '../contact-block/main'
 import AppearText from '../appear-text'
 
 export default async function ProfileBlock() {

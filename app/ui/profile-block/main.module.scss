@@ -21,7 +21,10 @@
   &_projects {
     padding-left: 29px;
 
-    &_title {
+    // span is added due GSAP/My component wrapper
+    &_title span {
+      opacity: 0;
+      transform: translate(0, 24px);
       font-size: 32px;
       font-weight: 900;
       letter-spacing: 0.023em;
@@ -41,7 +44,10 @@
 .profile_me {
   padding: 0 29px;
 
-  h1 {
+  &_title span {
+    // opacity works with GSAP
+    opacity: 0;
+    transform: translate(0, 24px) scale(1);
     font-size: 37px;
     font-weight: 900;
     letter-spacing: 0.023em;
