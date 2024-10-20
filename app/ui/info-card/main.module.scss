@@ -11,6 +11,10 @@
   height: 390px;
   border-radius: 8px;
   border: 1px solid $dark_border_blocks;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.37s;
+  animation-fill-mode: both;
 
   html[style="color-scheme: light;"] & {
     background-color: $light_base_bg;
@@ -56,6 +60,15 @@
   }
   html[style="color-scheme: light;"] & {
     color: $light_accent_02;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

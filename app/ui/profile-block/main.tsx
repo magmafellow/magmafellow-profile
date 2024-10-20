@@ -12,7 +12,7 @@ import Contact from '../contact-block/main'
 import AppearText from '../appear-text'
 import AppearInnerBox from '../appear-inner-box'
 
-export default async function ProfileBlock() {
+export default function ProfileBlock() {
   return (
     <div className={`${styles.profile}`}>
       <CommandText id="whoami" path="#/home/magmafellow" command="whoami" />

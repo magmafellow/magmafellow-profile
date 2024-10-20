@@ -17,9 +17,9 @@ export default function AppearInnerBox({
 
   useGSAP(
     () => {
-      gsap.fromTo(`#${id}`, {
+      gsap.fromTo(`#${id} > div`, {
         scrollTrigger: {
-          trigger: `#${id}`,
+          trigger: `#${id} > div`,
           start: 'top 100%',
           end: 'bottom top',
           // markers: true,
@@ -31,7 +31,7 @@ export default function AppearInnerBox({
       {
         y: 0,
         opacity: 1,
-        duration: 0.5,
+        duration: 1,
         ease: 'elastic.out',
       })
     },
