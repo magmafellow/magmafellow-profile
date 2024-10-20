@@ -21,9 +21,9 @@ export default function ModalV2({
     modalWrapper?.addEventListener('click', function (e) {
       console.log(e.target)
       const target = e.target as HTMLButtonElement
-      const modalCloser = document.querySelector(`div#${id} .modal-closer`)
+      const modalCloser = document.querySelector(`div#${id} .v2_modal-closer`)
       if (
-        target.classList.contains('modal-wrapper') ||
+        target.classList.contains('v2_modal-wrapper') ||
         isElemInParent(target, modalCloser)
       ) {
         modalWrapper.classList.remove('active')
@@ -41,7 +41,7 @@ export default function ModalV2({
     <div
       id={id}
       className={clsx(
-        'modal-wrapper z-[999] w-screen justify-center items-center fixed top-0 left-0 h-screen bg-opacity-30 bg-black'
+        'v2_modal-wrapper z-[999] w-screen justify-center items-center fixed top-0 left-0 h-screen bg-opacity-30 bg-black'
         // {
         //   'hidden': !isOpened,
         //   'block': isOpened,

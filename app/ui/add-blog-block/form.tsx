@@ -61,7 +61,7 @@ export default function Form() {
     >
       <ModalV2Activator className="bg-sky-500 hover:bg-sky-700 transition text-white rounded absolute right-4 top-4 py-3 px-5" text='faq' id='modal-add-new-blog-info' />
       <ModalV2 id="modal-add-new-blog-info">
-        <div className="modal bg-slate-800 relative min-h-[370px] px-7 pt-7 pb-5 min-w-[300px] rounded-md border border-gray-600">
+        <div className="v2_modal bg-slate-800 relative min-h-[370px] px-7 pt-7 pb-5 min-w-[300px] rounded-md border border-gray-600">
           <h3 className="font-bold text-2xl mb-3">How to use content field</h3>
           <p className='mb-4'>Content field is an html markup.</p>
           <p className='mb-4'>Everything is wrapped in div with class of blog</p>
@@ -70,7 +70,7 @@ export default function Form() {
             <img className='w-full h-full object-contain object-center' src="/images/content-example.png" alt="content example" />
           </a>
           <FaXmark
-            className="modal-closer absolute -top-3 -right-3 text-2xl text-white hover:text-sky-300 cursor-pointer"
+            className="v2_modal-closer absolute -top-3 -right-3 text-2xl text-white hover:text-sky-300 cursor-pointer"
           />
         </div>
       </ModalV2>

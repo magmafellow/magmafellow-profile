@@ -1,18 +1,18 @@
 
 
-.modal-wrapper {
+.v2_modal-wrapper {
   display: flex;
   visibility: hidden;
   opacity: 0.0;
   transition: 0.37s;
 }
 
-.modal-wrapper.pre-active {
+.v2_modal-wrapper.pre-active {
   visibility: visible;
   /* opacity: 1; */
 }
 
 
-.modal-wrapper.active {
+.v2_modal-wrapper.active {
   opacity: 1;
 }
