@@ -7,6 +7,7 @@ import MediaList from './media-list'
 import BioBox from './bio-box'
 import LanguageBox from './language'
 import ThemeToggle from '../toggle-theme-mode'
+import AppearInnerBox from '../appear-inner-box'
 
 export default function InfoCard() {
   return (

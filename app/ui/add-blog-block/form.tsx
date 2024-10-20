@@ -14,16 +14,8 @@ export default function Form() {
 
   useEffect(() => {
     const ace_code = document.createElement('script')
-    ace_code.innerHTML = `
-      const editor_ace = ace.edit('editor_ace')
-      editor_ace.setTheme('ace/theme/cloud_editor_dark')
-      editor_ace.session.setMode('ace/mode/html')
-      editor_ace.setOptions({
-        highlightSelectedWord: false,
-        cursorStyle: 'ace',
-      })
-      editor_ace.setOption('fontSize', '20px')
-    `
+    ace_code.src = '/scripts/init_ace.js'
+    ace_code.innerHTML = ``
 
     document.body.appendChild(ace_code)
   }, [])
@@ -78,6 +70,7 @@ export default function Form() {
         async
         src="https://cdn.jsdelivr.net/npm/ace-builds@1.36.0/src/ace.js"
       ></script>
+      {/* <script src="./scripts/init_ace.js"></script> */}
       {/* title */}
       <div>
         <label htmlFor="title">title</label>

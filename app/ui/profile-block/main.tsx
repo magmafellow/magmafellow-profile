@@ -10,6 +10,7 @@ import { FaArrowRightLong } from 'react-icons/fa6'
 import { FaDownload } from 'react-icons/fa6'
 import Contact from '../contact-block/main'
 import AppearText from '../appear-text'
+import AppearInnerBox from '../appear-inner-box'
 
 export default async function ProfileBlock() {
   return (
@@ -36,23 +37,25 @@ export default async function ProfileBlock() {
           something that matches my skills and experience do not hesitate to
           contact me.
         </p>
-        <div className={styles.download_box}>
-          <Link
-            className={`${styles.download_box_link} ${styles.download_box_contact}`}
-            href="#contact"
-          >
-            Contact
-            <FaArrowRightLong />
-          </Link>
-          <Link
-            download
-            className={`${styles.download_box_link} ${styles.download_box_resume}`}
-            href="/assets/resume.pdf"
-          >
-            Get CV
-            <FaDownload />
-          </Link>
-        </div>
+        <AppearInnerBox onBackEnterRestart={false} id='appear-buttons'>
+          <div className={styles.download_box}>
+            <Link
+              className={`${styles.download_box_link} ${styles.download_box_contact}`}
+              href="#contact"
+            >
+              Contact
+              <FaArrowRightLong />
+            </Link>
+            <Link
+              download
+              className={`${styles.download_box_link} ${styles.download_box_resume}`}
+              href="/assets/resume.pdf"
+            >
+              Get CV
+              <FaDownload />
+            </Link>
+          </div>
+        </AppearInnerBox>
       </div>
       <CommandText
         id="whatareprojects"
